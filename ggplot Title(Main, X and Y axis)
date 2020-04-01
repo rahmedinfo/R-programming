@@ -1,0 +1,2 @@
++ ggtitle("My Fist ggplot Baby") +
+  xlab("All Continent")+ ylab("Life Expectancy")

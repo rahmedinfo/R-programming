@@ -8,7 +8,8 @@
 + ggtitle("My first ggplot \n baby")+ xlab("All Continent")+ ylab("Life Expectancy")
 
 #CHANGE LEGEND TITLE- 
-#Reminder: If I use fill in -> ggplot(fill=continent)-> then in case of legend changing I have to use-> +labs(fill="continent") that will be the legend title. If it is-> ggplot(color=continent) -> then -> +labs(color="Continent")
+#Reminder: If I use fill in -> ggplot(fill=continent)-> then in case of legend changing I have to use-> +labs(fill="continent") 
+that will be the legend title. If it is-> ggplot(color=continent) -> then -> +labs(color="Continent")
 # Modify legend titles. p + labs(fill = "Dose (mg)") or +labs(color="Continent")
 
 USEFUL LINK: http://www.sthda.com/english/wiki/ggplot2-title-main-axis-and-legend-titles

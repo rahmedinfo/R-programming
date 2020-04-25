@@ -10,6 +10,8 @@ library(dplyr) #It is necessary for data read and write
 #libraray and require are same function
 require(gapminder)
 
+
+
 #-------------------------------------------------------
 data<- read.csv("myfile.csv")
 head(data)

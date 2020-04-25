@@ -1,4 +1,4 @@
-# Create Data Frame-----------
+#Create Data Frame-----------
 emp.data <- data.frame(
   emp_id = c (1:5), 
   emp_name = c("Rick","Dan","Michelle","Ryan","Gary"),
@@ -9,3 +9,10 @@ emp.data <- data.frame(
   stringsAsFactors = FALSE
 )
 print(emp.data)
+#Get the structure of the data frame.
+str(emp.data)
+#Print the summary.
+print(summary(emp.data))
+#Extract Specific columns.
+result <- data.frame(emp.data$emp_name,emp.data$salary) 
+print(result)

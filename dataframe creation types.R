@@ -1,4 +1,7 @@
-#Create Data Frame-----------
+#01-Create New Dataframe-------------------------------------------------------------------------
+df= data.frame(col1=letters[1:5], col2=rep("r", 5),col3= 1:5)
+row.names(df) <- c("abc", "abd", "acb", "cbd", "cda")
+#02-Create Data Frame-------------------------------------------------------------------------------
 emp.data <- data.frame(
   emp_id = c (1:5), 
   emp_name = c("Rick","Dan","Michelle","Ryan","Gary"),
@@ -9,18 +12,16 @@ emp.data <- data.frame(
   stringsAsFactors = FALSE
 )
 print(emp.data)
-#Get the structure of the data frame.
-str(emp.data)
-#Print the summary.
-print(summary(emp.data))
-#Extract Specific columns.
-result <- data.frame(emp.data$emp_name,emp.data$salary) 
+str(emp.data) #Get the structure of the data frame.
+summary(emp.data) #Get the summary of dataframe
+print(summary(emp.data)) #Print the summary.
+result <- data.frame(emp.data$emp_name,emp.data$salary)  #Extract Specific columns.
 print(result)
-#Extract first two rows.
-result <- emp.data[1:2,]
+result <- emp.data[1:2,] #Extract first two rows.
 print(result)
-# Extract 3rd and 5th row with 2nd and 4th column.
-result <- emp.data[c(3,5),c(2,4)]
+result <- emp.data[,1:3] # extract first 3 columns with all the rows
+print(result)
+result <- emp.data[c(3,5),c(2,4)] # Extract 3rd and 5th row with 2nd and 4th column.
 print(result)
 # New Colum Addition/ Add the "dept" coulmn.
 emp.data$dept <- c("IT","Operations","IT","HR","Finance")
@@ -37,7 +38,6 @@ emp.newdata <- 	data.frame(
   dept = c("IT","Operations","Fianance"),
   stringsAsFactors = FALSE
 )
-# Bind the two data frames.
-emp.finaldata <- rbind(emp.data,emp.newdata)
+emp.finaldata <- rbind(emp.data,emp.newdata) # Bind the two data frames.
 print(emp.finaldata)
 

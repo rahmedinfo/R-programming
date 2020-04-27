@@ -27,7 +27,15 @@ print(result)
 emp.data$dept <- c("IT","Operations","IT","HR","Finance")
 v <- emp.data
 print(v)
-# Create the second data frame/ To add more rows permanently to an existing data frame, we need to bring in the new rows
+
+#Create a Vector called DESIGNATION and Adding as a New Colum
+emp.data$designation<-c("Entry level","Manager","Technical specialist","Entry level","Senior Level")
+X<-emp.data
+#Or By using cbind() function
+designation <- c ("Entry level","Manager","Technical specialist","Entry level","Senior Level")
+emp.table<-cbind(emp.data,designation)
+
+#Create the second data frame/ To add more rows permanently to an existing data frame, we need to bring in the new rows
 #in the same structure as the existing data frame and use the rbind() function.
 #In the example below we create a data frame with new rows and merge it with the existing data frame to create the final data frame.
 emp.newdata <- 	data.frame(
@@ -38,6 +46,18 @@ emp.newdata <- 	data.frame(
   dept = c("IT","Operations","Fianance"),
   stringsAsFactors = FALSE
 )
-emp.finaldata <- rbind(emp.data,emp.newdata) # Bind the two data frames.
+emp.finaldata <- rbind(emp.data,emp.newdata) # Bind the two data frames using rbind()
 print(emp.finaldata)
 
+#03-Create New DAtaframe-----------------------------------------------------------------------------------------
+students_df<-data.frame(
+  Subjects=c("Math", "English", "Bangla", "Science", "Sociology", "Islam" ),
+  Percentage=c("90", "80", "97", "100", "87", "99")
+)
+row.names(students_df)<-c("A", "B", "C", "D", "E", "F")
+names(students_df)<-c("Course","Score") #Rename the data frame
+nrow(students_df) # number of rows in data frame
+ncol(students_df) # number of columns in data frame.
+dim(students_df) # Dimension of data frame
+students_df[1,2] # Access first row and second column of the data frame
+students_df[,1] # Access all the elements of the first column

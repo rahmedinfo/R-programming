@@ -1,7 +1,8 @@
 #01-Create New Dataframe-------------------------------------------------------------------------
 df= data.frame(col1=letters[1:5], col2=rep("r", 5),col3= 1:5)
 row.names(df) <- c("abc", "abd", "acb", "cbd", "cda")
-#02-Create Data Frame-------------------------------------------------------------------------------
+=========================================================================================================================================
+#02-Create Data Frame-----
 emp.data <- data.frame(
   emp_id = c (1:5), 
   emp_name = c("Rick","Dan","Michelle","Ryan","Gary"),
@@ -48,8 +49,8 @@ emp.newdata <- 	data.frame(
 )
 emp.finaldata <- rbind(emp.data,emp.newdata) # Bind the two data frames using rbind()
 print(emp.finaldata)
-
-#03-Create New DAtaframe-----------------------------------------------------------------------------------------
+====================================================================================================================================
+#03-Create New DAtaframe----------
 students_df<-data.frame(
   Subjects=c("Math", "English", "Bangla", "Science", "Sociology", "Islam" ),
   Percentage=c("90", "80", "97", "100", "87", "99")
@@ -61,3 +62,20 @@ ncol(students_df) # number of columns in data frame.
 dim(students_df) # Dimension of data frame
 students_df[1,2] # Access first row and second column of the data frame
 students_df[,1] # Access all the elements of the first column
+
+=====================================================================================================================
+#-------------04 MELTING AND CASTING IN DATAFRAME-------------------------------------
+install.packages("MASS")
+library(MASS)
+install.packages("reshape2")
+library(reshape2)
+install.packages("reshape")
+library(reshape)
+
+shipdata<-(head(ships,n=10))
+molten.ships <- melt(shipdata, id = c("type","year")) #Melting function
+recasted.ship <- cast(molten.ships, type+year~variable,sum) #Casting function
+
+
+
+

@@ -75,7 +75,19 @@ library(reshape)
 shipdata<-(head(ships,n=10))
 molten.ships <- melt(shipdata, id = c("type","year")) #Melting function
 recasted.ship <- cast(molten.ships, type+year~variable,sum) #Casting function
+=====================================================================================================================
+#Apply Function in R – apply vs lapply vs sapply vs mapply vs tapply vs rapply vs vapply
+#---05 Create DataFrame------------
+#Where the first Argument X is a data frame or matrix
+#Second argument 1 indicated Processing along rows .if it is 2 then it indicated processing along the columns
+#Third Argument is some aggregate function like sum, mean etc or some other user defined functions.
+Age<-c(56,34,67,33,25,28)
+Weight<-c(78,67,56,44,56,89)
+Height<-c(165, 171,167,167,166,181)
 
-
-
+BMI_df<-data.frame(Age,Weight,Height)
+apply(BMI_df,1,sum)# row wise sum up of dataframe using apply function in R
+apply(BMI_df,2,sum)# column wise sum up of dataframe using apply function in R
+apply(BMI_df,2,mean)# column wise mean of dataframe using apply function in R
+#PAGE LINK: http://www.datasciencemadesimple.com/apply-function-r/
 

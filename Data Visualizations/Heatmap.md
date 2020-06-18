@@ -5,19 +5,19 @@ dimensional image. It allows you to explore two dimensions as the axis and the t
 From our dataset, if we want to know cost of each item on every outlet, we can plot heatmap as shown below using three variables Item MRP,
 Outlet Identifier & Item Type from our mart dataset. Credit: R Bloggers
 
-##Install pheatmap package 
+## Install pheatmap package 
 ```
 install.packagesa("pheatmap")
 library(pheatmap)
 library(ggplot2)
 ?pheatmap
  ```
-##Make a Datafrme or Matrix by using your desired Data
+## Make a Datafrme or Matrix by using your desired Data
 ```
 head(mtcars)
 class(mtcars)
  ```
-##You have to scaling first before you create heatmap
+## You have to scaling first before you create heatmap
 ```
 df=scale(mtcars)
 pheatmap(df, 
@@ -35,13 +35,13 @@ pheatmap(df,
 ```		 
 ![Heatmap 01](https://github.com/r1ridwan/R-programming/blob/master/Pictures/Pheatmap%2001.png "Heatmap")
 
-##What will happen if we don't scale
+## What will happen if we don't scale
 
 pheatmap(mtcars )
 
 ![Heatmap 02](https://github.com/r1ridwan/R-programming/blob/master/Pictures/Pheatmap%2002.png "Heatmap")
 
-##After Scalling
+## After Scalling
 
 pheatmap(mtcars, scale = "column")
 

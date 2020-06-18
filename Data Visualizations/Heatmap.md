@@ -6,13 +6,17 @@ From our dataset, if we want to know cost of each item on every outlet, we can p
 Outlet Identifier & Item Type from our mart dataset. Credit: R Bloggers
 
 ##Install pheatmap package 
-```install.packagesa("pheatmap")
+```
+install.packagesa("pheatmap")
 library(pheatmap)
 library(ggplot2)
-?pheatmap ```
+?pheatmap
+ ```
 ##Make a Datafrme or Matrix by using your desired Data
-```head(mtcars)
-class(mtcars) ```
+```
+head(mtcars)
+class(mtcars)
+ ```
 ##You have to scaling first before you create heatmap
 ```
 df=scale(mtcars)

@@ -1,3 +1,3 @@
 # Here I put all the details about Heatmap. 
-![Heatmap](Pictures/Heatmap.png "heatmap 1")
+![Heatmap](https://github.com/r1ridwan/R-programming/blob/master/Pictures/Heatmap.png "Heatmap 1")
 

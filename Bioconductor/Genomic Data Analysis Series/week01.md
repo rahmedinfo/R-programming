@@ -1,7 +1,7 @@
 # Genomic Data Analysis Series 
 ### Introduction to Bioconductor: Annotation and Analysis of Genomes and Genomic Assays
 
-![Bioconductor](https://bioconductor.org/install/ "Install Bioconductor")
+* [Bioconductor Installation](https://bioconductor.org/install/ "Install Bioconductor")
 
 ### Bioconductor installation
 Previously biocLite was used to install any Bioconductor packages but Now we use BiocManager::install("")

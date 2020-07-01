@@ -9,9 +9,7 @@ So, keep remember BiocManager::install("") every time when install Bioconductor 
 ```
 if (!requireNamespace("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
-
 BiocManager::install("Biobase")
-
 BiocManager::install(c("GenomicFeatures", "AnnotationDbi"))
 n
 help.start()

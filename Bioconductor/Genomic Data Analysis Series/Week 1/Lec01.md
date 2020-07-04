@@ -17,14 +17,13 @@ library(GenomicRanges)
 ?GRanges
 
 ```
-Package Help
-
-	help(package="GenomicFeatures")
+Package Help: help(package="GenomicFeatures")
 
 Object Help
-	```
+```
 	class(6)
 	?numeric
 	?"numeric-class"
-	```
+	
+```
 ============================================================================================

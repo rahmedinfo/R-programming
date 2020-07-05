@@ -26,4 +26,11 @@ Object Help
 	?"numeric-class"
 	
 ```
+Help function
+```
+help(topic)/help(mean)
+?topic/ ?mean
+help.start()
+
+```
 ============================================================================================

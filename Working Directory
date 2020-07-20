@@ -1,4 +1,0 @@
-#Get Current Working Directory
-getwd()
-#Set New Working Directory
-setwd("I:/Bioinformatics/Scripts")

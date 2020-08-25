@@ -5,6 +5,17 @@ library(dplyr)
 library(readr)
 myfile <- read_csv("U133AGNF1B.gcrma.avg.csv")
 
+#Selecting Rows and Coulumns-1st Vlaue for ROWS and 2nd Value for COLUMNS
+myfile [1, 2]
+myfile[, 4]
+myfile[4, ]
+myfile[, 4:10]
+myfile[c(2, 5, 7), ]
+myfile[1:3, "Adipocyte"]
+myfile[120:230, "Adipocyte"]
+file1<-myfile[, c("Adipocyte", "AdrenalCortex", "Adrenalgland", "Liver", "Lung")]
+
+
 #EXTRACTING ROWS
 myfile2<-myfile[c(1, 3, 5, 7, 22, 45), ]
 
@@ -22,4 +33,18 @@ myfile6 <- myfile %>% slice(10:50)
 
 #DELETING ROWS BY THEIRS ROW NUMBERS
 myfile7<- myfile[-c(1:50), ]
+
+#DEPLYR IN ACTION: Let's go through an example to see how dplyr can aid us as historians by inputting U.S. decennial census data from 1790 to 2010. 
+us_state_populations_import<-read_csv("introductory_state_example.csv")
+california_and_new_york_state_populations<-us_state_populations_import %>%
+  filter(state %in% c("California", "New York"))
+ggplot(data=california_and_new_york_state_populations, aes(x=year, y=population, color=state)) +
+  geom_line() +
+  geom_point()
+missisipi_and_verginia_state_populations<-us_state_populations_import %>%
+  filter(state %in% c("Mississippi", "Virginia"))
+ggplot(data = missisipi_and_verginia_state_populations, aes(x=year, y=population, color=state))+
+  geom_line() +
+    geom_point()
+
 

@@ -1,6 +1,6 @@
 # Table of Contents
-- [Combining Vectors](#comvector)
-- [Accessing Vector elements] (#accessvector)
+1. [Combining Vectors](#comvector)
+2. [Accessing Vector elements](#accessvector)
 
 # Vector
 Vectors are the most basic R data objects and there are six types of atomic vectors. They are **logical, integer, double, complex, character and raw**.

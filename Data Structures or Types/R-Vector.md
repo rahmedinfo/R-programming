@@ -42,22 +42,48 @@ print(seq(5,9, by=0.4))
 # ACCESSING VECTOR ELEMENTS
 ## Indexing into data structure.
 ***If you want to get a part of data structure? Then Elements from a vector, matrix, or data frame can be extracted using numeric indexing, or by using a boolean vector of the appropriate length.***
+### Indexing with numbers and names
+With a vector
+```
+v <- c(1,4,4,3,2,2,3)
+v[c(2,3,4)]
+[1] 4 4 3
+ v[1:2]
+[1] 1 4
+v[5:6]
+[1] 2 2
+```
+With a Data Frame
+```
+# Create a sample data frame
+data <- read.table(header=T, text='
+ subject sex size
+       1   M    7
+       2   F    6
+       3   F    9
+       4   M   11
+ ')
+data[1, 3]
+data[3, 2]
+```
 #### Accessing vector elements using position
 ```
 t <- c("Sun","Mon","Tue","Wed","Thurs","Fri","Sat")
 u <- t[c(3,1,7)]
 print(u)
+[1] "Tue" "Sun" "Sat"
 ```
 #### Accessing vector elements using logical indexing
 ```
 v<- t[c(TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE)]
 print(v)
-**[1] "Sun" "Fri"**
+[1] "Sun" "Fri"
 ```
 #### Accessing vector elements using 0/1 indexing.
 ```
 y <- t[c(1,0,0,0,0,0,7)]
 print(y)
+[1] "Sun" "Sat"
 ```
 # VECTOR MANIPULATION
 ```

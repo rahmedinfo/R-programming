@@ -68,17 +68,27 @@ print(sort.result)
 revsort.result<- sort(v, decreasing = TRUE)
 print(revsort.result)
 revsort.result<- sort(v, decreasing = FALSE)
------------------------------------------------------
-v <- c('Blue', 'Red', 'Yellow', 'violet', 'Green')
+------------------------------------------------------
+v <- c("Blue", "Red", "Yellow", "violet", "Green")
 sort.resutl<-sort(v)
 print(sot.resutl)
 revsort.result<-sort(v, decreasing = FALSE)
 print(revsort.result)
 revsort.result<-sort(v, decreasing = TRUE)
 print(revsort.result)
-When we execute the above code, it produces the following result −
-[1]  -9   0   3   4   5   8  11 304
-[1] 304  11   8   5   4   3   0  -9
-[1] "Blue"   "Red"    "violet" "yellow"
-[1] "yellow" "violet" "Red"    "Blue"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

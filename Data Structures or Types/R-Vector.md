@@ -1,3 +1,7 @@
+# Table of Contents
+- [Combining Vectors](#comvector)
+- [Accessing Vector elements] (#accessvector)
+
 # Vector
 Vectors are the most basic R data objects and there are six types of atomic vectors. They are **logical, integer, double, complex, character and raw**.
 ```
@@ -9,7 +13,7 @@ length(x)
 ```
 ### [Details on this Link](https://www.tutorialspoint.com/r/r_vectors.htm)
 
-# Combining Vectors
+# Combining Vectors <a name="comvector"></a>
 ### [Details on this link](http://www.r-tutor.com/r-introduction/vector/combining-vectors)
 ```
 n= c(2, 3, 5) 
@@ -39,7 +43,7 @@ print(v)
 ```
 print(seq(5,9, by=0.4))
 ```
-# ACCESSING VECTOR ELEMENTS
+# ACCESSING VECTOR ELEMENTS <a name="accessvector"></a>
 ## Indexing into data structure.
 ***If you want to get a part of data structure? Then Elements from a vector, matrix, or data frame can be extracted using numeric indexing, or by using a boolean vector of the appropriate length.***
 ### Indexing with numbers and names
@@ -124,14 +128,19 @@ With the vector v from above
 ```
 #Here is the vector again
 v
+[1] 1 4 4 3 2 2 3
 #Drop the first element
 v[-1]
+[1] 4 4 3 2 2 3
 # Drop the 4th element
 v[-4]
+[1] 1 4 4 2 2 3
 #Drop the first three
 v[-1:-3]
+[1] 3 2 2 3
 #Drop the just last element
 v[-length(v)]
+[1] 1 4 4 3 2 2
 ```
 # VECTOR MANIPULATION
 ```

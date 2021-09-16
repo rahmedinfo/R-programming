@@ -82,6 +82,22 @@ data[1:2, c(2,3)]
 data[c(1,2), c("sex", "size")]
 data[c(1,2), c(2,3)]
 ```
+### Indexing with a boolean vector
+with the vector v from above
+```
+v <- c(1,4,4,3,2,2,3)
+v > 2
+v[v>2]
+v[c(F,T,T,T,F,F,T)]
+```
+With the data frame from the above
+```
+data$subject <3
+data[data$subject<3, ]
+data[c(T, T, F, F), ]
+# It is also possible to get the numeric indices of the TRUEs
+which(data$subject < 3)
+```
 #### Accessing vector elements using position
 ```
 t <- c("Sun","Mon","Tue","Wed","Thurs","Fri","Sat")
@@ -100,6 +116,22 @@ print(v)
 y <- t[c(1,0,0,0,0,0,7)]
 print(y)
 [1] "Sun" "Sat"
+
+```
+### Negative Indexign
+***Unlike in some other programming languages, when you use negative numbers for indexing in R, it doesn't mean to index backward from the end. Instead, it means to drop the element at that index, counting the usual way, from the beginning.***
+With the vector v from above
+```
+#Here is the vector again
+v
+#Drop the first element
+v[-1]
+# Drop the 4th element
+v[-4]
+#Drop the first three
+v[-1:-3]
+#Drop the just last element
+v[-length(v)]
 ```
 # VECTOR MANIPULATION
 ```

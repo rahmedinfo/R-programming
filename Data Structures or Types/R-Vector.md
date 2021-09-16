@@ -7,4 +7,4 @@ typeof(1:12)
 x <- list("a", "b", 1:10)
 length(x)
 ```
-### [LinK](https://www.tutorialspoint.com/r/r_vectors.htm)
+### [Details on this Link](https://www.tutorialspoint.com/r/r_vectors.htm)

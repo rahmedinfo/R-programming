@@ -1,6 +1,7 @@
 # Table of Contents
 1. [Combining Vectors](#comvector)
 2. [Accessing Vector elements](#accessvector)
+    1.[Indexing into data structure](#indexingvector)
 
 # Vector
 Vectors are the most basic R data objects and there are six types of atomic vectors. They are **logical, integer, double, complex, character and raw**.
@@ -44,7 +45,7 @@ print(v)
 print(seq(5,9, by=0.4))
 ```
 # ACCESSING VECTOR ELEMENTS <a name="accessvector"></a>
-## Indexing into data structure.
+## Indexing into data structure.<a namn="indexingvector"></a>
 ***If you want to get a part of data structure? Then Elements from a vector, matrix, or data frame can be extracted using numeric indexing, or by using a boolean vector of the appropriate length.***
 ### Indexing with numbers and names
 With a vector

@@ -1,9 +1,5 @@
----
-title: "Vector"
-author: "Md. Ridwan"
-date: "9/16/2021"
-output: html_document
----
+
 
 # Vector
-### Vectors are the most basic R data objects and there are six types of atomic vectors. They are **logical, integer, double, complex, character and raw**.
+Vectors are the most basic R data objects and there are six types of atomic vectors. They are **logical, integer, double, complex, character and raw**.
+

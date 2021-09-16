@@ -67,9 +67,10 @@ sort.result<- sort(v)
 print(sort.result)
 revsort.result<- sort(v, decreasing = TRUE)
 print(revsort.result)
-------------------------------------------------------
-v<-c("Blue", "Red", "Yellow", "violet", "Green")
-sot.resutl<-sort(v)
+revsort.result<- sort(v, decreasing = FALSE)
+-----------------------------------------------------
+v <- c('Blue', 'Red', 'Yellow', 'violet', 'Green')
+sort.resutl<-sort(v)
 print(sot.resutl)
 revsort.result<-sort(v, decreasing = FALSE)
 print(revsort.result)

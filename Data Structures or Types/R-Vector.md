@@ -63,8 +63,24 @@ data <- read.table(header=T, text='
        3   F    9
        4   M   11
  ')
+ # Get the element at row 1, column 3
 data[1, 3]
-data[3, 2]
+[1] 7
+data[1, "size"]
+[1] 7
+
+# Get rows 1 and 2, and all columns
+data[1:2, ]
+data[c(1,2), ]
+
+# Get rows 1 and 2, and only column 2
+data[1:2, 2]
+data[c(1,2), 2]
+
+#Get rows 1 and 2, and only the columns named "sex" and "size"
+data[1:2, c(2,3)]
+data[c(1,2), c("sex", "size")]
+data[c(1,2), c(2,3)]
 ```
 #### Accessing vector elements using position
 ```

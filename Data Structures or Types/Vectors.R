@@ -131,8 +131,17 @@ v[-4]
 v[-1:-3]
 #Drop the just last element
 v[-length(v)]
+v = c (2, 3, 4, 5)
+s = c ("two", "theree", "four", "five")
+c(v,s)
+c(s,v)
 
 
-
+v1 <- c(3, 4, 5, 6, 7, 8, 9)
+v2 <-c(4, 11)
+add.result <- v2 + v1
+print(add.result)
+sub.result <- v2 - v1
+print(sub.result)
 
 

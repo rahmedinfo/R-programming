@@ -1,21 +1,4 @@
-# Table of Contents
-1. [Combining Vectors](#comvector)
-2. [Accessing Vector elements](#accessvector)
 
-**[1. Markdown](#heading--1)**
-
-  * [1.1. Markdown formatting cheatsheet](#heading--1-1)
-  * [1.2. Markdown formatting details](#heading--1-2)
-
-**[2. BBCode formatting](#heading--2)**
-
-  * [2.1. Basic text formatting](#heading--2-1)
-
-      * [2.1.1. Not so basic text formatting](#heading--2-1-1)
-
-  * [2.2. Lists, Images, Code](#heading--2-2)
-  * [2.3. Special features](#heading--2-3)
-  
 # Vector
 Vectors are the most basic R data objects and there are six types of atomic vectors. They are **logical, integer, double, complex, character and raw**.
 ```
@@ -27,14 +10,18 @@ length(x)
 ```
 ### [Details on this Link](https://www.tutorialspoint.com/r/r_vectors.htm)
 
-# Combining Vectors <a name="comvector"></a>
-### [Details on this link](http://www.r-tutor.com/r-introduction/vector/combining-vectors)
+# Combining Vectors 
+***Vectors can be combined via the function c. For examples, the following two vectors n and s are combined into a new vector containing elements from both vectors.***
+#### [Details on this link](http://www.r-tutor.com/r-introduction/vector/combining-vectors)
 ```
 n= c(2, 3, 5) 
-s= c("aa", "bb", "cc", "dd", "ee") 
+s= c("aa", "bb", "cc", "dd", "ee")
+c(n,s)
+c(s,n)
 combined=c( s,  n)
 print(combined)
 ```
+***In the code snippet above, notice how the numeric values are being coerced into character strings when the two vectors are combined. This is necessary so as to maintain the same primitive data type for members in the same vector.***
 
 # SINGLE ELEMENT VECTOR
 ```
@@ -170,6 +157,7 @@ divi.result<-v1/v2 #Vector Division
 print(divi.result)
 ```
 # VECTOR RECYCLING
+If two vector are unequal in length, then shorter vector will recyle to match the longer vector, here below the shorter vector is v2, and it recyle two time to match the longer cycle. 
 ```
 v1<- c(3, 4, 5, 6, 7, 8, 9)
 v2<-c(4, 11)# v2 becomes (4,11,4,11,4,11,4)
@@ -188,7 +176,54 @@ revsort.result<- sort(v, decreasing = TRUE)
 revsort.result<- sort(v, decreasing = FALSE)
 print(revsort.result)
 ```
-# 
+# Vector Arithmetics
+```
+For example, suppose we have two vectors a and b.
+a = c (2, 3, 4, 5, 7)
+b = c (4, 7, 8, 9, 10)
+# We can multiply a and b vector with 5
+5 * a
+5 * b
+# We can sum this two vector togther
+a + b
+# we can subtraction, multiplication and division of these two vector
+a - b
+a * b
+a / b
+```
+
+# Named Vector Members
+***We can assign names to vector members. For example, the following variable v is a character string vector with two members.***
+```
+v <- c("Mary", "Nishi")
+names(v)= c("First", "Last")
+v["First"]
+v["Last"]
+v[c("Last", "First")]
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

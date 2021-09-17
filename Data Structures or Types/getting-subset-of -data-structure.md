@@ -25,6 +25,7 @@ data = read.table(header = T, text = '
       5     M   12')
 subset(data, subject < 3)
 data[data$subject < 3, ]
+
 # Assigning data frame to new data2 frame with condition
 data2 = subset(data, subject < 3)
 data3 = data[data$subject > 3, ]
@@ -32,6 +33,7 @@ data3 = data[data$subject > 3, ]
 # Subset of particular rows and columns
 subset(data, subject < 3, select = -subject)
 subset (data, subject < 3, select = c(sex, size))
+
 # Assging to new data frame
 data4 = subset(data, subject > 3, select = c(sex, size))
 
@@ -52,7 +54,6 @@ data[data$subject <3 | data$sex == "M", ]
 # Condition based on transformed data
 subset(data, log2(size) > 3)
 data[log2(data$size) > 3, ]
-
 
 # Subset if elements are in another vector
 subset(data, subject %in% c(1,3))

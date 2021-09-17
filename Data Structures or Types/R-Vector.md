@@ -8,7 +8,7 @@ typeof(1:12)
 x <- list("a", "b", 1:10)
 length(x)
 ```
-### [Details on this Link](https://www.tutorialspoint.com/r/r_vectors.htm)
+#### [Details on this Link](https://www.tutorialspoint.com/r/r_vectors.htm)
 
 # Combining Vectors 
 ***Vectors can be combined via the function c. For examples, the following two vectors n and s are combined into a new vector containing elements from both vectors.***
@@ -123,7 +123,7 @@ print(y)
 [1] "Sun" "Sat"
 
 ```
-### Negative Indexign
+### Negative Indexing
 ***Unlike in some other programming languages, when you use negative numbers for indexing in R, it doesn't mean to index backward from the end. Instead, it means to drop the element at that index, counting the usual way, from the beginning.***
 With the vector v from above
 ```
@@ -201,75 +201,4 @@ v["First"]
 v["Last"]
 v[c("Last", "First")]
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

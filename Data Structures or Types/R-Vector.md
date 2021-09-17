@@ -9,6 +9,7 @@
 - [Vector Elements Sorting](#elementsortingvector)
 - [Vector Arithmetics](#arthmeticvector)
 - [Named Vector Members](#namedvector)
+- [Making a vector filled with values](#vectorwithvalues)
 
 
 # Vector 
@@ -214,6 +215,28 @@ names(v)= c("First", "Last")
 v["First"]
 v["Last"]
 v[c("Last", "First")]
+```
+# Making a vector filled with values <a name="vectorwithvalues"></a>
+```
+rep(1, 50) # 1 will be repeated 50 times
+[1] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[37] 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+rep(3, 10)
+[1] 3 3 3 3 3 3 3 3 3 3
+rep(F, 50)#False will be output and for 50 times
+[1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+[13] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+[25] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+[37] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+[49] FALSE FALSE
+rep(1:5, 4)#1,2,3,4,5 will be repeated for 4 times
+[1] 1 2 3 4 5 1 2 3 4 5 1 2 3 4 5 1 2 3 4 5
+rep(1:5, each=4)
+[1] 1 1 1 1 2 2 2 2 3 3 3 3 4 4 4 4 5 5 5 5
+# Use it on a factor
+rep(factor(LETTERS[1:3]), 5)
+[1] A B C A B C A B C A B C A B C
+Levels: A B C
 ```
 
 

@@ -57,10 +57,7 @@ data[log2(data$size) > 3, ]
 # Subset if elements are in another vector
 subset(data, subject %in% c(1,3))
 data[data$subject %in% c(1,3), ]
-
-
-
-
+```
 
 
 

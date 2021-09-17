@@ -10,7 +10,7 @@ n <- 1:4
 let <- LETTERS[1:4]
 df = data.frame(n, let)
 ```
-### Information About Existence
+#### Information About Existence
 ```
 # List currently defined variables
 ls()
@@ -20,7 +20,7 @@ exists("x")
 exists("y")
 x
 ```
-### Information about size/structure
+#### Information about size/structure
 ```
 # Get information about structure
 str(n)
@@ -37,7 +37,7 @@ ncol(df)
 dim(df)
 ```
 # How to check and extract a variable from a dataset <a name="chexvariable"></a>
-### Loading LungCapData file
+#### Loading LungCapData file
 ```
 LungCapData = read.xlsx(file="LungCapData.xlsx", sheetIndex = 1)
 # Check structure of dataset
@@ -62,7 +62,7 @@ detach(LungCapData)
 mean(Age)
 Error: object 'Age' not found
 ```
-### Getting the type of variable with class command
+#### Getting the type of variable with class command
 ```
 # Attach the data again
 attach(LungCapData)

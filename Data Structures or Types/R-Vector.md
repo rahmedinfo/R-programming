@@ -1,4 +1,4 @@
-# [Table of Contents](#backtotop)
+# Table of Contents <a name="backtotop"></a>
 - [Combining Vectors](#comvector)
 - [Single Element Vector](#singleelementvector)
 - [Multiple Element Vector](#multiplevector)
@@ -11,7 +11,7 @@
 - [Named Vector Members](#namedvector)
 
 
-# Vector <a name="backtotop"></a>
+# Vector 
 Vectors are the most basic R data objects and there are six types of atomic vectors. They are **logical, integer, double, complex, character and raw**.
 ```
 library(tidyverse)

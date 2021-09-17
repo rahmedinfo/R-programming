@@ -59,9 +59,9 @@ data[log2(data$size) > 3, ]
 subset(data, subject %in% c(1,3))
 data[data$subject %in% c(1,3), ]
 ```
-# [How to Extract a Subset of a Vector in R](https://www.dummies.com/programming/r/how-to-extract-a-subset-of-a-vector-in-r/?keyword=vector%20in%20R&index=2&isSearch=1)
+### [How to Extract a Subset of a Vector in - link R](https://www.dummies.com/programming/r/how-to-extract-a-subset-of-a-vector-in-r/?keyword=vector%20in%20R&index=2&isSearch=1)
 
-
+### [How to Change Values in a Vector in R- linl](https://www.dummies.com/programming/r/how-to-change-values-in-a-vector-in-r/?keyword=vector%20in%20r&index=3&isSearch=1)
 
 
 

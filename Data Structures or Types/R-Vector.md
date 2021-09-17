@@ -1,14 +1,14 @@
 # Table of Contents
 - [Combining Vectors](#comvector)
-- [Accessing Vector elements](#accessvector)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
+- [SINGLE ELEMENT VECTOR](#singleelementvector)
+- [MULTIPLE ELEMENTS VECTOR](#multiplevector)
+- [Vector Using sequence (Seq.) operator](#seqvector)
+- [Indexing into data structure](#indexingvector)
+- [VECTOR MANIPULATION](#manipulatingvector)
+- [VECTOR RECYCLING](#recyclingvector )
+- [VECTOR ELEMENTS SORTING](#elementsortingvector)
+- [Vector Arithmetics](#arthmeticvector)
+- [Named Vector Members](#namedvector)
 
 
 # Vector
@@ -35,7 +35,7 @@ print(combined)
 ```
 ***In the code snippet above, notice how the numeric values are being coerced into character strings when the two vectors are combined. This is necessary so as to maintain the same primitive data type for members in the same vector.***
 
-# SINGLE ELEMENT VECTOR
+# SINGLE ELEMENT VECTOR <a name="singleelementvector"></a>
 ```
 typeof("abc"){Atomic vector of type CHARACTER}
 typeof(12.5){Atomic vector of type DOUBLE}
@@ -44,20 +44,22 @@ typeof(TRUE){Atomic vector of type LOGICAL}
 typeof(2+4i){Atomic vector of type COMPLEX}
 typeof(charToRaw('hello')){Atomic vector of type RAW}
 ```
-# MULTIPLE ELEMENTS VECTOR
+# MULTIPLE ELEMENTS VECTOR <a name="multiplevector"></a>
 ```
 v <- 5:13
 print(v)
 v <- 3.8:11.4
 print(v)
 ```
-# Vector Using sequence (Seq.) operator.
+# Vector Using sequence (Seq.) operator. <a name="seqvector"></a>
 ### Create vector with elements from 5 to 9 incrementing by 0.4
 ```
 print(seq(5,9, by=0.4))
 ```
-# ACCESSING VECTOR ELEMENTS <a name="accessvector"></a>
+
+# ACCESSING VECTOR ELEMENTS 
 ## Indexing into data structure.<a namn="indexingvector"></a>
+
 ***If you want to get a part of data structure? Then Elements from a vector, matrix, or data frame can be extracted using numeric indexing, or by using a boolean vector of the appropriate length.***
 ### Indexing with numbers and names
 With a vector
@@ -155,7 +157,7 @@ v[-1:-3]
 v[-length(v)]
 [1] 1 4 4 3 2 2
 ```
-# VECTOR MANIPULATION
+# VECTOR MANIPULATION <a name="manipulatingvector"></a>
 ```
 v1 <- c(3,8,4,5,0,11)
 v2 <- c(4,11,0,8,1,2)
@@ -168,7 +170,7 @@ print(multi.result)
 divi.result<-v1/v2 #Vector Division 
 print(divi.result)
 ```
-# VECTOR RECYCLING
+# VECTOR RECYCLING <a name="recyclingvector"></a>
 If two vector are unequal in length, then shorter vector will recyle to match the longer vector, here below the shorter vector is v2, and it recyle two time to match the longer cycle. 
 ```
 v1<- c(3, 4, 5, 6, 7, 8, 9)
@@ -178,7 +180,7 @@ print(add.result)
 sub.result<-v1-v2
 print(sub.result)
 ```
-# VECTOR ELEMENTS SORTING
+# VECTOR ELEMENTS SORTING <a name="elementsortingvector"></a>
 ```
 v<- c(3,8,4,5,0,11, -9, 304) or,
 v <- c("Blue", "Red", "Yellow", "violet", "Green")
@@ -188,7 +190,7 @@ revsort.result<- sort(v, decreasing = TRUE)
 revsort.result<- sort(v, decreasing = FALSE)
 print(revsort.result)
 ```
-# Vector Arithmetics
+# Vector Arithmetics <a name="arthmeticvector"></a>
 ```
 For example, suppose we have two vectors a and b.
 a = c (2, 3, 4, 5, 7)
@@ -204,7 +206,7 @@ a * b
 a / b
 ```
 
-# Named Vector Members
+# Named Vector Members <a name="namedvector"></a>
 ***We can assign names to vector members. For example, the following variable v is a character string vector with two members.***
 ```
 v <- c("Mary", "Nishi")

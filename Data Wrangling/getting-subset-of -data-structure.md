@@ -59,12 +59,36 @@ data[log2(data$size) > 3, ]
 subset(data, subject %in% c(1,3))
 data[data$subject %in% c(1,3), ]
 ```
-### [How to Extract a Subset of a Vector in R - link](https://www.dummies.com/programming/r/how-to-extract-a-subset-of-a-vector-in-r/?keyword=vector%20in%20R&index=2&isSearch=1)
+# Loading Gapminder dataset and extract data with condition applying on each variable
 
-### [How to Change Values in a Vector in R - link](https://www.dummies.com/programming/r/how-to-change-values-in-a-vector-in-r/?keyword=vector%20in%20r&index=3&isSearch=1)
+```
+#install dplyr
+install.packages("dplyr")
+install.packages("gapminder")
+#load libraries
+library(dplyr)
+library(gapminder)
 
+head(gapminder)
+write.xlsx(gapminder, file = "E:/Bioinformatics/GitHub/R-programming/Data Wrangling/gapminder.xlsx")
+gapminder = read.xlsx(file = "gapminder.xlsx",header = TRUE,  sheetIndex = 1)
 
+str(gapminder)
+attach(gapminder)
 
+# Get mean value of each variable 
+mean(gdpPercap)
+mean(lifeExp)
+
+#Find liefexp more thant 40 and assign into new dataframe
+gapminder2 = subset(gapminder, lifeExp > 40)
+
+# Applying conditions to each column and row and assigning them into new dataframe
+gapminder3 = subset(gapminder, lifeExp > 40 & year > 2000 & continent == "Asia")
+gapminder4 = subset(gapminder, lifeExp > 40 & year > 2000 & continent == "Asia" & country == "Bangladesh")
+data4 = subset(gapminder, year > 2000, select = c(country, lifeExp, year))
+data5 = subset(gapminder, year < 2000, select = -pop)
+```
 
 
 

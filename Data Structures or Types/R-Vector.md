@@ -10,6 +10,8 @@
 - [Vector Arithmetics](#arthmeticvector)
 - [Named Vector Members](#namedvector)
 - [Making a vector filled with values](#vectorwithvalues)
+- [How to Extract a Subset of a Vector in R](#extractvector)
+- [How to Change Values in a Vector in R](#changevalueofvector)
 
 
 # Vector 
@@ -238,7 +240,9 @@ rep(factor(LETTERS[1:3]), 5)
 [1] A B C A B C A B C A B C A B C
 Levels: A B C
 ```
+### [How to Extract a Subset of a Vector in R - link](https://www.dummies.com/programming/r/how-to-extract-a-subset-of-a-vector-in-r/?keyword=vector%20in%20R&index=2&isSearch=1)<a name="extractvector"></a>
 
+### [How to Change Values in a Vector in R - link](https://www.dummies.com/programming/r/how-to-change-values-in-a-vector-in-r/?keyword=vector%20in%20r&index=3&isSearch=1)<a name="changevalueofvector"></a>
 
 
 

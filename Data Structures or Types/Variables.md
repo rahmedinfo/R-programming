@@ -40,17 +40,23 @@ dim(df)
 #### Loading LungCapData file
 ```
 LungCapData = read.xlsx(file="LungCapData.xlsx", sheetIndex = 1)
+
 # Check structure of dataset
 str(LungCapData)
-# Getting names of thi dataset 
+
+# Getting names of this dataset 
 names(LungCapData)
+
 # Getting mean for Age variable
 mean(Age)
 > Error in mean(Age) : object 'Age' not found
+
 # We have to use dollar sign to detect the variable on this dataset
 mean(LungCapData$Age)
+
 # Lets attach the data in R's memory
 attach(LungCapData)
+
 # Now we don't need to use dollar sign to detec variables
  mean(Age)
 [1] 12.3269
@@ -79,6 +85,7 @@ class(LungCap)
 [1] "character"
  class(Caesarean)
 [1] "character"
+
 # To find out what levels or categroy have on this character variable
 
 # get the summary 

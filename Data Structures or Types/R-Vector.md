@@ -1,3 +1,15 @@
+# Table of Contents
+- [Combining Vectors](#comvector)
+- [Accessing Vector elements](#accessvector)
+- [](#)
+- [](#)
+- [](#)
+- [](#)
+- [](#)
+- [](#)
+- [](#)
+- [](#)
+
 
 # Vector
 Vectors are the most basic R data objects and there are six types of atomic vectors. They are **logical, integer, double, complex, character and raw**.
@@ -10,7 +22,7 @@ length(x)
 ```
 #### [Details on this Link](https://www.tutorialspoint.com/r/r_vectors.htm)
 
-# Combining Vectors 
+# Combining Vectors <a name="#comvector"></a>
 ***Vectors can be combined via the function c. For examples, the following two vectors n and s are combined into a new vector containing elements from both vectors.***
 #### [Details on this link](http://www.r-tutor.com/r-introduction/vector/combining-vectors)
 ```
@@ -201,4 +213,20 @@ v["First"]
 v["Last"]
 v[c("Last", "First")]
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

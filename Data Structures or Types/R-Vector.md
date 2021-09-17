@@ -238,6 +238,9 @@ rep(factor(LETTERS[1:3]), 5)
 [1] A B C A B C A B C A B C A B C
 Levels: A B C
 ```
+letters
+
+LETTERS
 
 
 
@@ -250,8 +253,5 @@ Levels: A B C
 
 
 
-
-
-
-- [Back To Top  ↑](#backtotop)
+- [Back To Top ???](#backtotop)
 

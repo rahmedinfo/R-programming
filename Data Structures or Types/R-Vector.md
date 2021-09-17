@@ -1,4 +1,4 @@
-# Table of Contents(#backtotop)
+# [Table of Contents](#backtotop)
 - [Combining Vectors](#comvector)
 - [Single Element Vector](#singleelementvector)
 - [Multiple Element Vector](#multiplevector)
@@ -230,5 +230,5 @@ v[c("Last", "First")]
 
 
 
-# **Back To Top ** <a name="backtotop"></a>
+**Back To Top** <a name="backtotop"></a>
 

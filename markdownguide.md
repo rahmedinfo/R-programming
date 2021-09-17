@@ -1,7 +1,11 @@
 # Table of Contents 1
 ```
 1. [Combining Vectors](#comvector)
-2. [Accessing Vector elements](#accessvector)
+2. [Indexing into data structure](#indexingvector)
+
+# Put the id 
+Combining Vectors <a name="comvector"></a>
+Indexing into data structure.<a namn="indexingvector"></a>
 ```
 
 # # Table of Contents 2
@@ -19,5 +23,7 @@
 
   * [2.2. Lists, Images, Code](#heading--2-2)
   * [2.3. Special features](#heading--2-3)
+
+# Then put the id name same as table of content 1
   ```
   

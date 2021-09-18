@@ -27,7 +27,8 @@ require(gapminder)
 library(gapminder)
 head(gapminder)
 ```
-#-------------------------------------------------------
+
+```
 data<- read.csv("myfile.csv")
 head(data)
 tail(data)
@@ -44,7 +45,7 @@ data[,5] #it will show entire colum
 data[11,] #it will show just entire row
 data$pop  #it will show the entire colum of it. 
 data$continent  #it will show the entire colum of it. 
-#----------------------------------------------------------
+```
 
 
 # DATA Export or data output,or writing data 
@@ -119,7 +120,7 @@ data$country <- factor(data$country)
 class(data$country)
 
 ```
-# Another Method for coverting factor to character Or character to factor
+# Another Method for converting factor to character Or character to factor
 ```
 # Load data file
 data <- read.csv(file="new_file.csv")

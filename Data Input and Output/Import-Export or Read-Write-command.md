@@ -1,16 +1,18 @@
 # Tble of Content
-- [](#)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
+- [Requried Packages to be installed](#pacakgess)
+- [DATA Export, Output or write command ](#dataexport)
+- [Data Import, Input, or reading data](#dataimport)
+- [Loading a data file from the internet](#datafrominternet)
+- [How to delete row or columns from a dataset?](#rowcoldelelte)
+- [Treating strings as factors or characters](#conversiondata)
+- [Fixed-width text files- Remove extra spaces](#spaceremove)
+- [Add spaces to columns in text formate data file](#addspace)
+- [Getting Fixed Column Data Into R with 'read.fwf()'](#fixcolumdata)
+- [Reading Excel Spreadsheets into R From The Clipboard](#redingfromclipboard)
  
 
 
-#Requried Packages to be installed
+# Requried Packages to be installed <a name="pacakgess"></a>
 ```
 #tidyverse istall require updated version of R---------
 #install.packages("tidyverse")
@@ -48,7 +50,7 @@ data$continent  #it will show the entire colum of it.
 ```
 
 
-# DATA Export or data output,or writing data 
+# DATA Export, Output or write command <a name="dataexport"></a>
 ```
 data("gapminder")
 
@@ -70,7 +72,7 @@ write.table(gapminder, "I:/Bioinformatics/Project 01/mygapminder_file.csv", row.
 
 ```
 
-# Data Import, or Data Input, or reading data
+# Data Import, Input, or reading data <a name="dataimport"></a>
 ```
 #This function is best for read and write
 myfile<-read.csv(file = "new_file.csv")
@@ -92,7 +94,7 @@ library(gapminder)
 write.table(gapminder, file = "xlsxfile.xlsx")
 newfile=read.table(file="xlsxfile.xlsx",)
 ```
-# Loading a file from the internet
+# Loading a data file from the internet <a name="datafrominternet"></a>
 
 ```
 data <- read.csv("http://www.cookbook-r.com/Data_input_and_output/Loading_data_from_a_file/datafile.csv", header = F)
@@ -100,7 +102,7 @@ data <- read.csv("http://www.cookbook-r.com/Data_input_and_output/Loading_data_f
 # Manually Assign header names
 names(data)<- c("First", "Last", "Sex", "Number")
 ```
-# How to delete row or columns from a dataset
+# How to delete row or columns from a dataset? <a name="rowcoldelelte"></a>
 ```
 # Delete the row from a dataframe- first argument for row and 2nd for columns
 data2 <- data[-c(1), ]
@@ -110,7 +112,7 @@ data3 <- data2[-c(3)]
 row_to_keep = c( FALSE, TRUE, TRUE, TRUE)
 myData = data [row_to_keep,]
 ```
-# Treating strings as factors or characters. 
+# Treating strings as factors or characters.<a name="conversiondata"></a> 
 By default, strings  the data are converted to factors. If you load the data below with read.csv, then all the text columns will be treated as factors, even though it might make more sense to treat some of them as strings. If you don't want your data to be treated as factor instead of string then use the following command.
 ```
 data <- read.csv("new_file.csv", stringsAsFactors = FALSE)
@@ -120,7 +122,7 @@ data$country <- factor(data$country)
 class(data$country)
 
 ```
-# Another Method for converting factor to character Or character to factor
+#### Another Method for converting factor to character Or character to factor
 ```
 # Load data file
 data <- read.csv(file="new_file.csv")
@@ -143,15 +145,55 @@ data[stringcols] <- lapply(data[stringcols], as.character)
 
 class(data$country)
 ```
+# Fixed-width text files- Remove extra spaces. <a name="spaceremove"></a>
+ Suppose your data has fixed-width columns, like this:
+```
+First     Last  Sex Number
+ Currer     Bell    F      2
+    Dr.    Seuss    M     49
+    ""   Student   NA     21
+    
+One way to read it in is to simply use read.table() with strip.white=TRUE, which will remove extra spaces.
+f1 = read.table("clipboard", header = TRUE, strip.white = TRUE)
+```
+# Add spaces to columns in text formate data file. <a name="addspace"></a>
+However, your data file may have columns containing spaces, or columns with no spaces separating them, like this, where the scores column represents six different measurements, each from 0 to 3.
+```
+# this is data txt
+subject  sex  scores
+   N  1    M  113311
+   NE 2    F  112231
+   S  3    F  111221
+   W  4    M  011002
+   
+```
+In this case, you may need to use the read.fwf() function. If you read the column names from the file, it requires that they be separated with a delimiter like a single tab, space, or comma. If they are separated with multiple spaces, as in this example, you will have to assign the column names directly.
+
+# Getting Fixed Column Data Into R with 'read.fwf()'. <a name="fixcolumdata"></a>
+when you have no space in your column data use the following command
+
+```
+# Width of the columns. -2 means drop those columns
+# 'Skip=1' - skip the first line (contains header here)
+# Strip out leading and trailing whitespace when reading each
+f3 = read.fwf("New Text Document.txt", 
+         widths = c(7, 5, -2, 1, 1, 1, 1, 1, 1),
+         skip = 1,
+         col.names = c("subject", "sex", "s1", "s2", "s3", "s4", "s5", "s6"),
+         strip.white=TRUE)
+
+```
+# Reading Excel Spreadsheets into R From The Clipboard. <a name="redingfromclipboard"></a>
+If you have a spreadsheet open, you can actually copy the contents to your clipboard and import them quickly into R. To do this, you can either use the readClipboard() or read.table() functions:
+```
+readClipboard()
+```
 
 
 
 
 
 
-
-
--------------------------------------------
 
 
 

@@ -125,5 +125,45 @@ library(gapminder)
 write.table(gapminder, file = "xlsxfile.xlsx")
 newfil2e=read.table(file="xlsxfile.xlsx",)
 
+# Fixed-width text files
+# Suppose your data has fixed-width columns, like this:
+
+# One way to read it in is to simply use read.table() with strip.white=TRUE, which will remove extra spaces.
+f1 = read.table("clipboard", header = TRUE, strip.white = TRUE)
+
+# Getting Fixed Column Data Into R with read.fwf(), when you have no space in your column data use the following command
+
+f3 = read.fwf("New Text Document.txt", 
+         widths = c(7, 5, -2, 1, 1, 1, 1, 1, 1),
+         skip = 1,
+         col.names = c("subject", "sex", "s1", "s2", "s3", "s4", "s5", "s6"),
+         strip.white=TRUE)
+f4 = read.fwf("New Text Document.txt", c(7,5,-2,1,1,1,1,1,1), header=TRUE, strip.white=TRUE)
+readClipboard()
+data5 = read.table(file = "clipboard")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

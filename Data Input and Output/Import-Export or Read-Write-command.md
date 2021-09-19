@@ -195,7 +195,7 @@ If you have a spreadsheet open, you can actually copy the contents to your clipb
 readClipboard()
 ```
 
-
+#Loading data from keyboard or clipboard
 
 
 

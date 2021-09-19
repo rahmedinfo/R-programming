@@ -144,8 +144,7 @@ data5 = read.table(file = "clipboard")
 
 readClipboard()
 
-
-
+data4 <- read.table(stdin(), header = TRUE)
 
 
 

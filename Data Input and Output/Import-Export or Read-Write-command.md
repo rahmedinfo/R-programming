@@ -1,4 +1,4 @@
-# Tble of Content
+# Table of Content
 - [Requried Packages to be installed](#pacakgess)
 - [DATA Export, Output or write command ](#dataexport)
 - [Data Import, Input, or reading data](#dataimport)

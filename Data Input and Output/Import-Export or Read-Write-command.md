@@ -99,15 +99,17 @@ newfile=read.table(file="xlsxfile.xlsx",)
 ```
 data <- read.csv("http://www.cookbook-r.com/Data_input_and_output/Loading_data_from_a_file/datafile.csv", header = F)
 
-# Manually Assign header names
+#Manually Assign header names
 names(data)<- c("First", "Last", "Sex", "Number")
 ```
 # How to delete row or columns from a dataset? <a name="rowcoldelelte"></a>
 ```
 # Delete the row from a dataframe- first argument for row and 2nd for columns
 data2 <- data[-c(1), ]
+
 # Delete the column if you put only one argument it will decide only for column and it will deleted the column
 data3 <- data2[-c(3)]
+
 # Another way to decide
 row_to_keep = c( FALSE, TRUE, TRUE, TRUE)
 myData = data [row_to_keep,]
@@ -126,14 +128,18 @@ class(data$country)
 ```
 # Load data file
 data <- read.csv(file="new_file.csv")
+
 # Check the class of a sepcific variable
 class(data$continent)
 [1] "character"
+
 # if you want to convert this variable from character to factor then use the following command
 data$continent <- as.factor(data$continent)
+
 #Check the class now
 class(data$continent)
 [1] "factor"
+
 # If you want to convert a variable form factor to character then use the follwoing command
 data$continent <- as.character(data$continent)
 class(data$continent)
@@ -153,7 +159,7 @@ First     Last  Sex Number
     Dr.    Seuss    M     49
     ""   Student   NA     21
     
-One way to read it in is to simply use read.table() with strip.white=TRUE, which will remove extra spaces.
+#One way to read it in is to simply use read.table() with strip.white=TRUE, which will remove extra spaces.
 f1 = read.table("clipboard", header = TRUE, strip.white = TRUE)
 ```
 # Add spaces to columns in text formate data file. <a name="addspace"></a>
@@ -169,7 +175,7 @@ subject  sex  scores
 ```
 In this case, you may need to use the read.fwf() function. If you read the column names from the file, it requires that they be separated with a delimiter like a single tab, space, or comma. If they are separated with multiple spaces, as in this example, you will have to assign the column names directly.
 
-# Getting Fixed Column Data Into R with 'read.fwf()'. <a name="fixcolumdata"></a>
+#### Getting Fixed Column Data Into R with 'read.fwf()'. <a name="fixcolumdata"></a>
 when you have no space in your column data use the following command
 
 ```

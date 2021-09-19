@@ -142,7 +142,7 @@ f4 = read.fwf("New Text Document.txt", c(7,5,-2,1,1,1,1,1,1), header=TRUE, strip
 readClipboard()
 data5 = read.table(file = "clipboard")
 
-
+readClipboard()
 
 
 

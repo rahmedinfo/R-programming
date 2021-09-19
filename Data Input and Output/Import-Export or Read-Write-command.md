@@ -6,9 +6,11 @@
 - [How to delete row or columns from a dataset?](#rowcoldelelte)
 - [Treating strings as factors or characters](#conversiondata)
 - [Fixed-width text files- Remove extra spaces](#spaceremove)
-      [Loading data from clipboard](#datafromclipboard)
-      [Loading data from scripts](#datafromscripts)
-- [Add spaces to columns in text formate data file](#addspace)
+- [Loading data from clipboard](#datafromclipboard)
+
+      - [Loading data from scripts](#datafromscripts)
+      - [Add spaces to columns in text formate data file](#addspace)
+
 - [Getting Fixed Column Data Into R with 'read.fwf()'](#fixcolumdata)
 - [Reading Excel Spreadsheets into R From The Clipboard](#redingfromclipboard)
  

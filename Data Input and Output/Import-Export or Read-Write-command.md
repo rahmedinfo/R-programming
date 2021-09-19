@@ -6,6 +6,8 @@
 - [How to delete row or columns from a dataset?](#rowcoldelelte)
 - [Treating strings as factors or characters](#conversiondata)
 - [Fixed-width text files- Remove extra spaces](#spaceremove)
+      [Loading data from clipboard](#datafromclipboard)
+      [Loading data from scripts](#datafromscripts)
 - [Add spaces to columns in text formate data file](#addspace)
 - [Getting Fixed Column Data Into R with 'read.fwf()'](#fixcolumdata)
 - [Reading Excel Spreadsheets into R From The Clipboard](#redingfromclipboard)
@@ -162,6 +164,20 @@ First     Last  Sex Number
 #One way to read it in is to simply use read.table() with strip.white=TRUE, which will remove extra spaces.
 f1 = read.table("clipboard", header = TRUE, strip.white = TRUE)
 ```
+#### Loading data from keyboard or clipboard <a name="datafromclipboard"></a>
+```
+data <- read.table('clipboard', header=TRUE)
+```
+#### Loading data from scripts <a name="datafromscripts"></a>
+```
+data2 = read.table(header = TRUE, text = '
+                     size weight cost
+                   small      8    8
+                   medium     9    10
+                   large     10    12
+                   ')
+```
+
 # Add spaces to columns in text formate data file. <a name="addspace"></a>
 However, your data file may have columns containing spaces, or columns with no spaces separating them, like this, where the scores column represents six different measurements, each from 0 to 3.
 ```
@@ -196,7 +212,9 @@ readClipboard()
 ```
 
 #Loading data from keyboard or clipboard
-
+```
+data <- read.table('clipboard', header=TRUE)
+```
 
 
 

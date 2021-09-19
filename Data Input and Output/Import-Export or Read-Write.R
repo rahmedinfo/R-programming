@@ -139,16 +139,9 @@ f3 = read.fwf("New Text Document.txt",
          col.names = c("subject", "sex", "s1", "s2", "s3", "s4", "s5", "s6"),
          strip.white=TRUE)
 f4 = read.fwf("New Text Document.txt", c(7,5,-2,1,1,1,1,1,1), header=TRUE, strip.white=TRUE)
-readClipboard()
-data5 = read.table(file = "clipboard")
-
-readClipboard()
-
-data4 <- read.table(stdin(), header = TRUE)
 
 
-
-
+data <- read.table('clipboard', header=TRUE)
 
 
 

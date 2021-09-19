@@ -7,13 +7,27 @@
 - [Treating strings as factors or characters](#conversiondata)
 - [Fixed-width text files- Remove extra spaces](#spaceremove)
 - [Loading data from clipboard](#datafromclipboard)
-
-      - [Loading data from scripts](#datafromscripts)
-      - [Add spaces to columns in text formate data file](#addspace)
+   1. [Loading data from scripts](#datafromscripts)
+   2. [Add spaces to columns in text formate data file](#addspace)
 
 - [Getting Fixed Column Data Into R with 'read.fwf()'](#fixcolumdata)
 - [Reading Excel Spreadsheets into R From The Clipboard](#redingfromclipboard)
  
+**[1. Markdown](#heading--1)**
+
+  * [1.1. Markdown formatting cheatsheet](#heading--1-1)
+  * [1.2. Markdown formatting details](#heading--1-2)
+
+**[2. BBCode formatting](#heading--2)**
+
+  * [2.1. Basic text formatting](#heading--2-1)
+
+      * [2.1.1. Not so basic text formatting](#heading--2-1-1)
+
+  * [2.2. Lists, Images, Code](#heading--2-2)
+  * [2.3. Special features](#heading--2-3)
+
+# Then put the id name same as table of content 1
 
 
 # Requried Packages to be installed <a name="pacakgess"></a>

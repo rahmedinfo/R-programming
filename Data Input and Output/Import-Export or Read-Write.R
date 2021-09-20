@@ -143,8 +143,8 @@ f4 = read.fwf("New Text Document.txt", c(7,5,-2,1,1,1,1,1,1), header=TRUE, strip
 
 data <- read.table(stdin(), header=TRUE) 
 
-
-
+data("airquality")
+View(air)
 
 
 

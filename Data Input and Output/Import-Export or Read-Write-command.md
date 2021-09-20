@@ -273,10 +273,16 @@ for (i in 1:20)
 # How to export default R data into txt format using sink() function
 ```
 data(airquality)
-sink('export_dataframe.txt', row.name = F)
+sink('export_dataframe.txt')
 airquality
+
+# if you want to export just summary of the data into the sink connected txt file then use the following function
+summary(airquality)
+
+# if you want to remove the sink() function connected file then use the following command
+unlink('export_data1.txt')
 ```
-![Sink Function](https://github.com/r1ridwan/R-programming/blob/master/Data%20Input%20and%20Output/Pictures/Screenshot_2.png)
+![Sink() Export](https://github.com/r1ridwan/R-programming/blob/master/Data%20Input%20and%20Output/Pictures/Screenshot_2.png)
 
 
 

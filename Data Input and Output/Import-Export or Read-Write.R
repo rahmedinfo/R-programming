@@ -146,8 +146,7 @@ data <- read.table(stdin(), header=TRUE)
 data("airquality")
 View(air)
 
-
-
+unlink('analysis-output.txt')
 
 
 

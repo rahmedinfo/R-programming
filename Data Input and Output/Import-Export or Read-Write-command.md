@@ -285,8 +285,7 @@ unlink('export_data1.txt')
 ```
 ![Sink() Export](https://github.com/r1ridwan/R-programming/blob/master/Data%20Input%20and%20Output/Pictures/Screenshot_2.png)
 
-
-
+unli
 
 
 

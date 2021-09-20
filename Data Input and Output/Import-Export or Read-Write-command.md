@@ -266,9 +266,9 @@ sink("my_first_sink.txt")
 
 # Print numbers from 1 to 20
 for (i in 1:20)
-![Sink Function](https://github.com/r1ridwan/R-programming/blob/master/Data%20Input%20and%20Output/Pictures/Screenshot_1.png)
 
 ```
+![Sink Function](https://github.com/r1ridwan/R-programming/blob/master/Data%20Input%20and%20Output/Pictures/Screenshot_1.png)
 
 
 

@@ -14,6 +14,7 @@
 - [Reading Excel Spreadsheets into R From The Clipboard](#redingfromclipboard)
 - [Saving data file in R data format (.Rdmpd)](#saveinrdmpd)
 - [Saving data file in binary or ASCII RDS format](#saveinrdsdata)
+- [How to use sink() function in R](#sinkgfunckh)
  
 
 
@@ -258,8 +259,8 @@ saveRDS(data2, "data2.rds", ascii=TRUE)
 # To load the data again:
 data4 <- readRDS("data.rds")
 ```
-
-# Writing text and output from analyses to a file with singk() function in R
+# How to use sink() function in R <a name="sinkgfunckh"></a>
+## Writing text and output from analyses to a file with singk() function in R
 ```
 # sinks the data into connection as text file
 sink("my_first_sink.txt")
@@ -270,7 +271,7 @@ for (i in 1:20)
 ```
 ![Sink Function](https://github.com/r1ridwan/R-programming/blob/master/Data%20Input%20and%20Output/Pictures/Screenshot_1.png)
 
-# How to export default R data into txt format using sink() function
+## How to export default R data into txt format using sink() function
 ```
 data(airquality)
 sink('export_dataframe.txt')
@@ -283,6 +284,22 @@ summary(airquality)
 unlink('export_data1.txt')
 ```
 ![Sink() Export](https://github.com/r1ridwan/R-programming/blob/master/Data%20Input%20and%20Output/Pictures/Screenshot_2.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

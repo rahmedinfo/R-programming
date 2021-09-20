@@ -1,0 +1,7 @@
+data2 <-
+structure(list(size = c("small", "medium", "large"), weight = 8:10, 
+    cost = c(8L, NA, 12L)), class = "data.frame", row.names = c(NA, 
+-3L))
+data3 <-
+structure(list(First = c("Currer", "Dr.", ""), Last = c("Bell", 
+"Seuss", "Student"), Number = c("2", "49", "21")), row.names = 2:4, class = "data.frame")

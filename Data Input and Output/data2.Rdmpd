@@ -1,0 +1,4 @@
+data2 <-
+structure(list(size = c("small", "medium", "large"), weight = 8:10, 
+    cost = c(8L, NA, 12L)), class = "data.frame", row.names = c(NA, 
+-3L))

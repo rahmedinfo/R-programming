@@ -12,6 +12,8 @@
 - [Add spaces to columns in text formate data file](#addspace)
 - [Getting Fixed Column Data Into R with 'read.fwf()'](#fixcolumdata)
 - [Reading Excel Spreadsheets into R From The Clipboard](#redingfromclipboard)
+- [Saving data file in R data format (.Rdmpd)](#saveinrdmpd)
+- [Saving data file in binary or ASCII RDS format](#saveinrdsdata)
  
 
 
@@ -176,9 +178,17 @@ data <- read.table('clipboard', header=TRUE)
 data2 = read.table(header = TRUE, text = '
                      size weight cost
                    small      8    8
-                   medium     9    10
+                   medium     9    NA
                    large     10    12
                    ')
+# Write to a file, suppress row names                   
+write.csv(data2, file="data2.csv", row.names = F)
+
+# Same, except that instead of "NA", output blank cells. IT will leave the NA cell as blank cell. Nothing will be present on this cell. 
+write.csv(data2, file = "data2.csv", row.names = F, na = "")
+
+# Use tabs, suppress row names and column names. There will no row and columns, it will be like text format. 
+write.table(data2, "data2.csv", sep="\t", row.names=FALSE, col.names=FALSE)
 ```
 
 # Add spaces to columns in text formate data file. <a name="addspace"></a>
@@ -213,11 +223,41 @@ If you have a spreadsheet open, you can actually copy the contents to your clipb
 ```
 readClipboard()
 ```
+# Saving data file in R data format (.Rdmpd) <a name = "saveinrdmpd"></a>
+```
+dump("data2", "data2.Rdmpd")
+# and it will save like the following format. 
+data2 <-
+structure(list(size = c("small", "medium", "large"), weight = 8:10, 
+    cost = c(8L, NA, 12L)), class = "data.frame", row.names = c(NA, 
+-3L))
 
+# If you want to save multiple objects:
+dump(c("data2", "data3"), "data.Rdmpd")
+# and then it will save like the following format
+data2 <-
+structure(list(size = c("small", "medium", "large"), weight = 8:10, 
+    cost = c(8L, NA, 12L)), class = "data.frame", row.names = c(NA, 
+-3L))
+data3 <-
+structure(list(First = c("Currer", "Dr.", ""), Last = c("Bell", 
+"Seuss", "Student"), Number = c("2", "49", "21")), row.names = 2:4, class = "data.frame")
 
+# To load the data again: 
+source("data.Rdmpd")
+# When loaded, the original data names will automatically be used.
+```
+# Saving data file in binary or ASCII RDS format <a name="saveinrdsdata"></a>
+```
+# Save a single object in binary RDS format
+saveRDS(data, "data.rds")
 
+# Or, using ASCII format
+saveRDS(data2, "data2.rds", ascii=TRUE)
 
-
+# To load the data again:
+data4 <- readRDS("data.rds")
+```
 
 
 

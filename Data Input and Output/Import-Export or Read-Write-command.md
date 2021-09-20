@@ -270,10 +270,13 @@ for (i in 1:20)
 ```
 ![Sink Function](https://github.com/r1ridwan/R-programming/blob/master/Data%20Input%20and%20Output/Pictures/Screenshot_1.png)
 
-
-
-
-
+# How to export default R data into txt format using sink() function
+```
+data(airquality)
+sink('export_dataframe.txt', row.name = F)
+airquality
+```
+![Sink Function](https://github.com/r1ridwan/R-programming/blob/master/Data%20Input%20and%20Output/Pictures/Screenshot_2.png)
 
 
 

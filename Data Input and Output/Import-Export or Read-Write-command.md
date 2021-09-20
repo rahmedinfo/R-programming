@@ -4,7 +4,6 @@
 - [Data Import, Input, or reading data](#dataimport)
 - [Loading a data file from the internet](#datafrominternet)
 - [How to delete row or columns from a dataset?](#rowcoldelelte)
-- [Treating strings as factors or characters](#conversiondata)
 - [Fixed-width text files- Remove extra spaces](#spaceremove)
    - [Loading data from clipboard](#datafromclipboard)
    - [Loading data from scripts](#datafromscripts)
@@ -122,43 +121,7 @@ data3 <- data2[-c(3)]
 row_to_keep = c( FALSE, TRUE, TRUE, TRUE)
 myData = data [row_to_keep,]
 ```
-# Treating strings as factors or characters.<a name="conversiondata"></a> 
-By default, strings  the data are converted to factors. If you load the data below with read.csv, then all the text columns will be treated as factors, even though it might make more sense to treat some of them as strings. If you don't want your data to be treated as factor instead of string then use the following command.
-```
-data <- read.csv("new_file.csv", stringsAsFactors = FALSE)
 
-# You might have to convert some columns to factors
-data$country <- factor(data$country)
-class(data$country)
-
-```
-#### Another Method for converting factor to character Or character to factor
-```
-# Load data file
-data <- read.csv(file="new_file.csv")
-
-# Check the class of a sepcific variable
-class(data$continent)
-[1] "character"
-
-# if you want to convert this variable from character to factor then use the following command
-data$continent <- as.factor(data$continent)
-
-#Check the class now
-class(data$continent)
-[1] "factor"
-
-# If you want to convert a variable form factor to character then use the follwoing command
-data$continent <- as.character(data$continent)
-class(data$continent)
-[1] "character"
-
-# Another method: convert columns factor to character or character to factor
-stringcols <- c("country", "continent")
-data[stringcols] <- lapply(data[stringcols], as.character)
-
-class(data$country)
-```
 # Fixed-width text files- Remove extra spaces. <a name="spaceremove"></a>
  Suppose your data has fixed-width columns, like this:
 ```

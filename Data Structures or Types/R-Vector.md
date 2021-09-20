@@ -12,7 +12,7 @@
 - [Making a vector filled with values](#vectorwithvalues)
 - [How to Extract a Subset of a Vector in R](#extractvector)
 - [How to Change Values in a Vector in R](#changevalueofvector)
-
+- [Vector Types Conversion like facto to character or character to factor](#conversiondata)
 
 # Vector 
 Vectors are the most basic R data objects and there are six types of atomic vectors. They are **logical, integer, double, complex, character and raw**.
@@ -244,8 +244,44 @@ Levels: A B C
 
 ### [How to Change Values in a Vector in R - link](https://www.dummies.com/programming/r/how-to-change-values-in-a-vector-in-r/?keyword=vector%20in%20r&index=3&isSearch=1)<a name="changevalueofvector"></a>
 
+# Vector Types Conversion 
+#### Treating strings as factors or characters.<a name="conversiondata"></a> 
+By default, strings  the data are converted to factors. If you load the data below with read.csv, then all the text columns will be treated as factors, even though it might make more sense to treat some of them as strings. If you don't want your data to be treated as factor instead of string then use the following command.
+```
+data <- read.csv("new_file.csv", stringsAsFactors = FALSE)
 
+# You might have to convert some columns to factors
+data$country <- factor(data$country)
+class(data$country)
 
+```
+#### Another Method for converting factor to character Or character to factor
+```
+# Load data file
+data <- read.csv(file="new_file.csv")
+
+# Check the class of a sepcific variable
+class(data$continent)
+[1] "character"
+
+# if you want to convert this variable from character to factor then use the following command
+data$continent <- as.factor(data$continent)
+
+#Check the class now
+class(data$continent)
+[1] "factor"
+
+# If you want to convert a variable form factor to character then use the follwoing command
+data$continent <- as.character(data$continent)
+class(data$continent)
+[1] "character"
+
+# Another method: convert columns factor to character or character to factor
+stringcols <- c("country", "continent")
+data[stringcols] <- lapply(data[stringcols], as.character)
+
+class(data$country)
+```
 
 
 

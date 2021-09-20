@@ -259,6 +259,27 @@ saveRDS(data2, "data2.rds", ascii=TRUE)
 data4 <- readRDS("data.rds")
 ```
 
+# Writing text and output from analyses to a file with sing() function in R
+```
+# sinks the data into connection as text file
+sink("my_first_sing.txt")
+
+# Print numbers from 1 to 20
+for (i in 1:20)
+
+```
+![Sink Function](https://github.com/r1ridwan/R-programming/blob/master/Data%20Input%20and%20Output/Pictures/Screenshot_1.png)
+
+
+
+
+
+
+
+
+
+
+
 
 
 

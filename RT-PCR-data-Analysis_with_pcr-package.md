@@ -1,3 +1,9 @@
+# Table of Content
+1. [](#)
+2. [](#)
+
+# Required Packages
+```
 install.packages('pcr')
 library(pcr)
 library(ggplot2)
@@ -12,10 +18,7 @@ install.packages('writexl')
 library("writexl")
 install.packages("xlsx")
 library(xlsx)
-
-
-save.image("something.RData")
-load("something.RData")
+```
 
 # Quality Assessment (pcr_assessd)
 
@@ -28,7 +31,9 @@ write_xlsx(ct3,"E:/THESIS/RT PCR Data Analysis/CT3.xlsx")
 
 ### Reading CT3 xlsx/csv file from directory
 Ekhane ct3 or table 1 data use kora hoise - ei table a every ng amount of sample koto ct value dey tar average value deya ase 
+```
 ct3=read.xlsx(file="CT3.xlsx", sheetIndex = 1)
+```
 
 ### Make a vector of RNA amounts
 ekhane each ng amount of sample er ct value 3 times kore deya ase data file er moddhe, setai deya ase tar mane holo ct3 excel er c_myc er first 3 ta ct value er jonno 1 ng RNA diye pcr run deya hoisilo, and setar ct value, evabe prottek tar khetre hobe
@@ -131,7 +136,7 @@ res3 <- pcr_analyze(ct1,
 write.xlsx(res3, "E:/THESIS/RT PCR Data Analysis/Pcr data analysis with R/Double delta CT method (separate tubes).xlsx")
 ```
 
-###Calculate Stardard amounts and errors
+### Calculate Stardard amounts and errors
 ```
 res4 <- pcr_analyze(ct1,
                     group_var = group_var,
@@ -142,12 +147,12 @@ res4 <- pcr_analyze(ct1,
                     method = 'relative_curve')
 ```
 
-###Exporting res4 file
+### Exporting res4 file
 ```
 write.xlsx(res4, "E:/THESIS/RT PCR Data Analysis/Pcr data analysis with R/Standard curve method(seperate tube).xlsx")
 ```
 
-###Calculate all values and errors in one step
+### Calculate all values and errors in one step
  mode== 'same_tube'
 ```
 res5 <- pcr_analyze(ct2,
@@ -157,12 +162,12 @@ res5 <- pcr_analyze(ct2,
                     mode = 'same_tube')
 ```
 
-###Exporting res5 file
+### Exporting res5 file
 ```
 write.xlsx(res5, "E:/THESIS/RT PCR Data Analysis/Pcr data analysis with R/Double delta CT method (same tube).xlsx")
 ```
 
-###Relative expression of c-myc using double delta CT
+### Relative expression of c-myc using double delta CT
 ```
 gg1 <- pcr_analyze(ct1,
                    group_var = group_var,
@@ -208,7 +213,7 @@ res6 <- pcr_analyze(pcr_hk,
 write.xlsx(res6, "E:/THESIS/RT PCR Data Analysis/Pcr data analysis with R/delta_ct.xlsx")
 ```
 
-#GAPDH relative fold change using delta CT
+### GAPDH relative fold change using delta CT
 the average relative fold change of the identical housekeeping genes and there error terms in two tissue samples.
 ```
 pcr_analyze(pcr_hk,
@@ -222,7 +227,7 @@ pcr_analyze(pcr_hk,
 ```
 #===============================================================================
 
-#Significance Testing (pcr_test)
+# Significance Testing (pcr_test)
 
 ### Loading ct4 r data file and exporting into xlsx file format
 ```

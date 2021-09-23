@@ -282,16 +282,18 @@ data[stringcols] <- lapply(data[stringcols], as.character)
 
 class(data$country)
 ```
-# Convert between numeric vectors, character vectors, and factors.
+#### Convert between numeric vectors, character vectors, and factors.
 ```
 # Define a vector
 n = 10:14
 class(n)
 [1] "integer"
+
 # integer to character
 c = as.character(n)
 class(c)
 [1] "character"
+
 # Character to factor
 f = as.factor(c)
 class(f)

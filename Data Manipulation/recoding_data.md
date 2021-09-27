@@ -1,5 +1,6 @@
 
 # Manupulating dataset starwars
+This document covers how to recode, mutate, filter a starwars dataset and how to add variable with if_else function
 
 ## Loding requried library
 ```
@@ -14,8 +15,8 @@ starwars
 ```
 # ei variable gula niye sw data arrange hobe
 sw = starwars %>%
-  select(name, height, mass, sex) %>% # mass variable k weight te rename korlam
-  rename(weight = mass) %>%  
+  select(name, height, mass, sex) %>% 
+  rename(weight = mass) %>%  # mass variable k weight te rename korlam
   na.omit() %>%
   
 # Height variable er value cm a deya ase, eta ke meter a nilam

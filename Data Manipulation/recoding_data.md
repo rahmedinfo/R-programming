@@ -36,3 +36,27 @@ sw = starwars %>%
   mutate(size = height > 1 & weight > 75,
          size = if_else(size == TRUE, "Big", "Small"))
  ``` 
+# Recoding a dataframe using %in% operator
+## Create a new dataframe
+```
+my_basket = data.frame(ITEM_GROUP = c("Fruit","Fruit","Fruit","Fruit","Fruit","Vegetable","Vegetable","Vegetable","Vegetable","Dairy","Dairy","Dairy","Dairy","Dairy"), 
+                       ITEM_NAME = c("Apple","Banana","Orange","Mango","Papaya","Carrot","Potato","Brinjal","Raddish","Milk","Curd","Cheese","Milk","Paneer"),
+                       Price = c(100,80,80,90,65,70,60,70,25,60,40,35,50,60),
+                       Tax = c(2,4,5,NA,2,3,NA,1,NA,4,5,NA,4,NA))
+```
+
+## Lets create a new column "IS_DAIRY". If the dairy name is milk, curd, cheese, paneer then it will say YES, and if the Item group name is Dairy it will say YES, otherwise it will say NO. 
+```
+my_basket1=within(my_basket,{
+  IS_DAIRY='NO'
+  IS_DAIRY[ITEM_NAME %in% c('Milk',"Curd","Cheese","Paneer")]='YES'
+  IS_DAIRY[ITEM_GROUP %in% c("Dairy")]='YES'
+  IS_DAIRY[ITEM_GROUP %in% c("Fruit","Vegetable")]='NO'
+  
+})
+```
+## Another way to do the same recoding in a dataframe. Recoding a new column or variable with condition
+my_basket %>%
+  mutate(IS_DAIRY = ITEM_NAME %in% c("Milk","Curd","Cheese","Paneer", "Apple"),
+         IS_DAIRY = ITEM_GROUP %in% c("Dairy"),
+         IS_DAIRY = if_else(IS_DAIRY == TRUE, "YES", "NO")) -> my_basket2

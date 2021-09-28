@@ -55,4 +55,3 @@ filter(hflights,Dest=="JFK" & Cancelled==1 )->flight
 
 
 
-

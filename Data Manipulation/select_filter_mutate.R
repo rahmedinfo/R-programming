@@ -31,28 +31,16 @@ install.packages("hflights")
 library(hflights)
 View(hflights)
 
-#filter functions to filter Distance variable more than 3000
-filter(hflights, Distance > 3000) -> flight1
-range(flight1$Distance)
-
-# Same function run with pipe operator, both does the same thing
-hflights %>%
-  filter( Distance > 2000) -> flight2
 
 
-filter(hflights, UniqueCarrier %in% c("OO", "AA", "US")) -> flight1
-table(flight1$UniqueCarrier)
 
-filter(hflights, TaxiIn+TaxiOut>AirTime)->flight1
-mutate(hflights,TotalTaxi=TaxiIn+TaxiOut)->flight2
-filter(hflights, DepTime<500|ArrTime>2200)->flight1
+
+
+filter(hflights, DepTime < 500 | ArrTime > 2200)->flight5
+
 filter(hflights,Dest=="JFK" & Cancelled==1 )->flight
 
 
-# Using Select function to extract some specific variable and render into new dataframe 'sw'
-
-hflights %>%
-  select(Year, Month, UniqueCarrier, Distance, TaxiIn, TaxiOut) -> sw
 
 
 

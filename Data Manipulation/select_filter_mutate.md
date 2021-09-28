@@ -61,11 +61,12 @@ filter(hflights, UniqueCarrier %in% c("OO", "AA", "US")) -> flight1
 table(flight1$UniqueCarrier)
 ```
 
-
-
+## This function will filter the data where the total value of TaxiIn and TaxiOut is greater than AirTime
+```
 filter(hflights, TaxiIn+TaxiOut>AirTime)->flight1
+```
 
-filter(hflights, DepTime<500|ArrTime>2200)->flight1
+filter(hflights, DepTime < 500 | ArrTime > 2200)->flight1
 filter(hflights,Dest=="JFK" & Cancelled==1 )->flight
 
 
@@ -81,4 +82,16 @@ hflights %>%
 
 
 # How to use *'mutate'* function?
+
+## It will create a new variable TotalTaxi which contin the total value of TaxiIn and TaxiOut
+```
 mutate(hflights,TotalTaxi=TaxiIn+TaxiOut)->flight2
+```
+
+
+
+
+
+
+
+

@@ -244,7 +244,7 @@ Levels: A B C
 
 ### [How to Change Values in a Vector in R - link](https://www.dummies.com/programming/r/how-to-change-values-in-a-vector-in-r/?keyword=vector%20in%20r&index=3&isSearch=1)<a name="changevalueofvector"></a>
 
-# Vector Types Conversion 
+# Vector Types Conversion or Data type conversion
 #### Treating strings as factors or characters.<a name="conversiondata"></a> 
 By default, strings  the data are converted to factors. If you load the data below with read.csv, then all the text columns will be treated as factors, even though it might make more sense to treat some of them as strings. If you don't want your data to be treated as factor instead of string then use the following command.
 ```

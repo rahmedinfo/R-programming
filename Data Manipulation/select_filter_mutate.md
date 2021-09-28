@@ -29,7 +29,7 @@ starwars %>%
   summarise(Average = mean(BMI))
 ```
 
-# How to use **'filter'** function?
+# How to use *'filter'* function?
 
 ## Loading required packages and library
 ```
@@ -70,7 +70,7 @@ filter(hflights,Dest=="JFK" & Cancelled==1 )->flight
 
 
 
-# How to use **'select'** Function?
+# How to use *'select'* Function?
 ## Using Select function to extract some specific variable and render into new dataframe 'sw'
 ```
 hflights %>%
@@ -80,5 +80,5 @@ hflights %>%
 
 
 
-# How to use **'mutate'** function?
+# How to use *'mutate'* function?
 mutate(hflights,TotalTaxi=TaxiIn+TaxiOut)->flight2

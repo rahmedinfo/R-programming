@@ -10,8 +10,9 @@ library(tidyverse)
 data()
 ```
 
-## Load Starward data
+## Load starwars data
 ```
+starwars
 view(starwars)
 ```
 
@@ -28,7 +29,7 @@ starwars %>%
   summarise(Average = mean(BMI))
 ```
 
-# How to use filter function?
+# How to use **'filter'** function?
 
 ## Loading required packages and library
 ```
@@ -39,7 +40,7 @@ library(hflights)
 View(hflights)
 ```
 
-## filter functions to filter Distance variable more than 3000
+## 'filter' functions to filter Distance variable more than 3000
 ```
 filter(hflights, Distance > 3000) -> flight1
 range(flight1$Distance)
@@ -52,7 +53,7 @@ hflights %>%
 ```
 
 
-## Now filter with %in% operator
+## Now filter with '%in%' operator
 ** it will filter just OO, AA, and US data. That mean it will show only those row where UniqueCarrier value is OO, AA, and US, other than that now row will be appear here on flight1 dataframe.**
 
 ```
@@ -69,7 +70,7 @@ filter(hflights,Dest=="JFK" & Cancelled==1 )->flight
 
 
 
-# How to use Select Function?
+# How to use **'select'** Function?
 ## Using Select function to extract some specific variable and render into new dataframe 'sw'
 ```
 hflights %>%
@@ -79,5 +80,5 @@ hflights %>%
 
 
 
-# How to use mutate function?
+# How to use **'mutate'** function?
 mutate(hflights,TotalTaxi=TaxiIn+TaxiOut)->flight2

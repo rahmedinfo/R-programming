@@ -56,7 +56,7 @@ my_basket1=within(my_basket,{
 })
 ```
 ## Another way to do the same recoding in a dataframe. Recoding a new column or variable with condition
-````
+```
 my_basket %>%
   mutate(IS_DAIRY = ITEM_NAME %in% c("Milk","Curd","Cheese","Paneer", "Apple"),
          IS_DAIRY = ITEM_GROUP %in% c("Dairy"),

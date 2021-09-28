@@ -145,3 +145,12 @@ sub.result <- v2 - v1
 print(sub.result)
 
 
+
+
+
+
+
+
+
+
+

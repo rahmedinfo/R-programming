@@ -2,6 +2,12 @@
 - [Quality Assessment](#qualityassessment)
   - [Amplification Efficiency](#amplificationefficiency)
   - [Standard Curve](#standard_curve)
+  
+- [Analysis Model](#analysis_model)
+  - [Relative expression using double delta ct](#doubledelta_ct)
+  - [Relative fold change of control gene using delta ct](#foldcheck)
+  
+- [Significance Testing](#significance_test)
 
 
 
@@ -24,8 +30,8 @@ install.packages("xlsx")
 library(xlsx)
 ```
 
-# Quality Assessment (pcr_assessd) <a name="qualityassessment"></a>
-#===========================================================================
+# 1/ Quality Assessment (pcr_assessd) <a name="qualityassessment"></a>
+
 
 ## Export a data frame or r data file into excel file
 ```
@@ -90,40 +96,53 @@ slope <- res2$slope
 ```
 
 ## Standard curve of c_myc and GAPDH
+```
 gg <- pcr_assess(ct3,
                  amount = amount,
                  method = 'standard_curve',
                  plot = TRUE)
 gg + 
   labs(x = 'Log 10 amount', y = 'CT value')
+```
+# End of Quality Assessment
 
-#End of Quality Assessment====================================================== 
 
 
-# Start of Analysis Model (pcr_analyze)
-#===========================================================================
 
-#Exporting ct1 r data file into xlsx file format
+# 2/Analysis Model (pcr_analyze) <a name="analysis_model"></a>
+
+## Exporting ct1 r data file into xlsx file format
+```
 write.xlsx(ct1, "E:/THESIS/RT PCR Data Analysis/Pcr data analysis with R/CT1.xlsx")
+```
 
-#Reading the CT1 xlsx file
+## Reading the CT1 xlsx file
+```
 ct1=read.xlsx(file="CT1.xlsx", sheetIndex = 1)
+```
 
-#Add Grouping Variable
-# ekhane first 6 ta ct value holo brain er and last 6 ta holo kidney er
+## Add Grouping Variable
+**ekhane first 6 ta ct value holo brain er and last 6 ta holo kidney er**
+```
 group_var <- rep(c('brain', 'kidney'), each = 6)
+```
 
-#Calculate all values and errors in one step
-## mode == 'seperate_tube' default
+## Calculate all values and errors in one step <a name="doubledelta_ct"></a>
+**mode == 'seperate_tube' default**
+```
 res3 <- pcr_analyze(ct1,
                     group_var = group_var,
                     reference_gene = 'GAPDH',
                     reference_group = 'brain')
+```
 
-#Exporting res3 (Double delta CT method (separate tubes))
+## Exporting res3 (Double delta CT method (separate tubes))
+```
 write.xlsx(res3, "E:/THESIS/RT PCR Data Analysis/Pcr data analysis with R/Double delta CT method (separate tubes).xlsx")
+```
 
-#Calculate Stardard amounts and errors
+## Calculate Stardard amounts and errors
+```
 res4 <- pcr_analyze(ct1,
                     group_var = group_var,
                     reference_gene = 'GAPDH',
@@ -131,26 +150,39 @@ res4 <- pcr_analyze(ct1,
                     intercept = intercept,
                     slope = slope,
                     method = 'relative_curve')
+```
 
-#Exporting res4 file
+## Exporting res4 file
+```
 write.xlsx(res4, "E:/THESIS/RT PCR Data Analysis/Pcr data analysis with R/Standard curve method(seperate tube).xlsx")
+```
 
-#Exporting ct2 r data file into xlsx format
+## Exporting ct2 r data file into xlsx format
+```
 write.xlsx(ct2, "E:/THESIS/RT PCR Data Analysis/Pcr data analysis with R/CT2.xlsx")
-#Reading xlsx ct2 file
+```
+## Reading xlsx ct2 file
+```
 ct2=read.xlsx(file="CT2.xlsx", sheetIndex = 1 )
+```
 
-#Calculate all values and errors in one step
-## mode== 'same_tube'
+## Calculate all values and errors in one step
+**mode== 'same_tube'**
+```
 res5 <- pcr_analyze(ct2,
                     group_var = group_var,
                     reference_gene = 'GAPDH',
                     reference_group = 'brain',
                     mode = 'same_tube')
-#Exporting res5 file
-write.xlsx(res5, "E:/THESIS/RT PCR Data Analysis/Pcr data analysis with R/Double delta CT method (same tube).xlsx")
+```
 
-#Relative expression of c-myc using double delta CT
+## Exporting res5 file
+```
+write.xlsx(res5, "E:/THESIS/RT PCR Data Analysis/Pcr data analysis with R/Double delta CT method (same tube).xlsx")
+```
+
+## Relative expression of c-myc using double delta CT
+```
 gg1 <- pcr_analyze(ct1,
                    group_var = group_var,
                    reference_gene = 'GAPDH',
@@ -168,26 +200,37 @@ gg2 <- pcr_analyze(ct2,
                   labs(x='', y='Relative mRNA expression')+
                   ggtitle(label = 'Same Tubes')
 plot_grid(gg1, gg2)  
+```
 
-## make a data.frame of two identical columns
+## make a data.frame of two identical columns <a name="foldcheck"></a>
+```
 pcr_hk <- data.frame(
   GAPDH1 = ct1$GAPDH,
   GAPDH2 = ct1$GAPDH
 )
-## add grouping variable
-group_var <- rep(c('brain', 'kidney'), each = 6)
+```
 
-# delta_ct method
-## calculate caliberation
+## add grouping variable
+```
+group_var <- rep(c('brain', 'kidney'), each = 6)
+```
+
+## delta_ct method
+### calculate caliberation
+```
 res6 <- pcr_analyze(pcr_hk,
                    group_var = group_var,
                    reference_group = 'brain',
                    method = 'delta_ct')
+```
 
-#Exporting this delta_ct method
+## Exporting this delta_ct method
+```
 write.xlsx(res6, "E:/THESIS/RT PCR Data Analysis/Pcr data analysis with R/delta_ct.xlsx")
+```
 
-#GAPDH relative fold change using delta CT
+## GAPDH relative fold change using delta CT
+```
 pcr_analyze(pcr_hk,
             group_var = group_var,
             reference_group = 'brain',
@@ -196,40 +239,66 @@ pcr_analyze(pcr_hk,
   theme(legend.position = 'top',
         legend.direction = 'horizontal')+
   labs(x='', y='Relative fold change')
-#===============================================================================
-#Significance Testing (pcr_test)
-#Loading ct4 r data file and exporting into xlsx file format
-write.xlsx(ct4, "E:/THESIS/RT PCR Data Analysis/Pcr data analysis with R/ct4.xlsx")
-#Reading ct4 xlsx file
-ct4=read.xlsx(file = "ct4.xlsx", sheetIndex = 1)
+```
+# End of Analysis Model 
 
-#make group variable
+
+# Significance Testing (pcr_test) <a name="significance_test"></a>
+
+## Loading ct4 r data file and exporting into xlsx file format
+```
+write.xlsx(ct4, "E:/THESIS/RT PCR Data Analysis/Pcr data analysis with R/ct4.xlsx")
+```
+
+## Reading or importing ct4 xlsx file
+```
+ct4=read.xlsx(file = "ct4.xlsx", sheetIndex = 1)
+```
+
+## Make group variable
+```
 group <- rep(c('control', 'treatment'), each=12)
-#Test using t-test
+```
+
+## Test using t-test <a name="t_test"></a>
+```
 test1 <- pcr_test(ct4,
                  group_var= group,
                  reference_gene = 'ref',
                  reference_group= 'control',
                  test = 't.test')
-#Exporting t-test file test1
+```
+
+## Exporting t-test file test1
+```
 write.xlsx(test1, "E:/THESIS/RT PCR Data Analysis/Pcr data analysis with R/t-test1.xlsx")
-#Test using wilcox.test
+```
+
+## Test using wilcox.test <a name="wilcoxon_test"></a>
+```
 test2 <- pcr_test(ct4,
                   group_var = group,
                   reference_gene = 'ref',
                   reference_group = 'control',
                   test = 'wilcox.test')
-#Exporting wilcox test file to excel
+```
+
+## Exporting wilcox test file to excel
+```
 write.xlsx(test2, "E:/THESIS/RT PCR Data Analysis/Pcr data analysis with R/wilcox-test.xlsx")
-#Test using lm
+```
+## Test using lm (Linear Regression)<a name="linear_regression"></a>
+```
 test3 <- pcr_test(ct4,
                   group_var = group,
                   reference_gene = 'ref',
                   reference_group = 'control',
                   test = 'lm')
-#Exporting the lm test file
+```
+## Exporting the lm test file
+```
 write.xlsx(test3, "E:/THESIS/RT PCR Data Analysis/Pcr data analysis with R/lm-test.xlsx")
-
+```
 
 
 

@@ -107,12 +107,12 @@ gg <- pcr_assess(ct3,
 gg + 
   labs(x = 'Log 10 amount', y = 'CT value')
 ```
-# End of Quality Assessment
+### End of Quality Assessment
 
 
 
 
-# 2/Analysis Model (pcr_analyze) <a name="analysis_model"></a>
+# 2/ Analysis Model (pcr_analyze) <a name="analysis_model"></a>
 
 ## Exporting ct1 r data file into xlsx file format
 ```
@@ -243,10 +243,10 @@ pcr_analyze(pcr_hk,
         legend.direction = 'horizontal')+
   labs(x='', y='Relative fold change')
 ```
-# End of Analysis Model 
+### End of Analysis Model 
 
 
-# Significance Testing (pcr_test) <a name="significance_test"></a>
+# 3/ Significance Testing (pcr_test) <a name="significance_test"></a>
 
 ## Loading ct4 r data file and exporting into xlsx file format
 ```

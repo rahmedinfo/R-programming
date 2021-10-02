@@ -8,6 +8,9 @@
   - [Relative fold change of control gene using delta ct](#foldcheck)
   
 - [Significance Testing](#significance_test)
+  - [T-test](#t_test)
+  - [Wilcoxon-test](#wilcoxon_test)
+  - [lm (Linear Regression)-test](#linear_regression)
 
 
 

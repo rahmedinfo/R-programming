@@ -19,7 +19,7 @@ my_data2 = my_data %>%
   )
 ```
 
-# get column names
+### get column names
 ```
 colnames(my_data)
 ```

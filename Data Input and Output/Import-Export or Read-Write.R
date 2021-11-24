@@ -149,10 +149,7 @@ View(air)
 unlink('analysis-output.txt')
 
 
-# chekcing lsjhlksdhgosi hgoghoisg oijgosijgoisjgoi
-h;klsdjhoisjiop
-hdkhoksjo
-#lksgjlkdgldkgl;sr
+
 
 
 

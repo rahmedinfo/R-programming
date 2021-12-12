@@ -11,4 +11,10 @@ str(datafilename)
 =====================================================
 #TO SEE THE NUMBER OF ROWS IN DATA
 nrow(datafilename)
-=======================================================
+==================================================
+# CHECK  VERSIONS (Bioconductor, Packages, R)
+R.version
+version()
+packageVersion("BiocManager")
+packageVersion("dplyr")
+====================================================

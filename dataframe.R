@@ -100,9 +100,16 @@ my_df[, 1] # Select all elements in the first column
 
 # Sometimes you have many vaiables and difficult to find out the numbers of columns, in this case name of the variable is the best option
 my_df[1:5, "type"] # Select first five rows and type column 
-
-
-
+=====================================================================================
+# How to Sort or Order element in a dataframe? 
+# In data analysis you can sort your data according to a certain variable in the dataset. In R, this is done with the help of the function order().
+# order() is a function that gives you the ranked position of each element when it is applied on a variable, such as a vector for example:
+a <- c(100, 10, 1000)
+order(a)
+[1] 2 1 3
+a[order(a)]
+[1]   10  100 1000
+======================================================================================
 
 
 

@@ -90,4 +90,11 @@ apply(BMI_df,1,sum)# row wise sum up of dataframe using apply function in R
 apply(BMI_df,2,sum)# column wise sum up of dataframe using apply function in R
 apply(BMI_df,2,mean)# column wise mean of dataframe using apply function in R
 #PAGE LINK: http://www.datasciencemadesimple.com/apply-function-r/
-
+====================================================================================================
+# CREATE A DATAFRAME OF THREE GENES WITH DIFFERENT VALUES
+data = data.frame(
+  C1 = c(1887.7, 9.9, 236.4), C2=c(8.1, 8.9, 8.4), C3=c(1799.6, 7.7, 220.9), 
+  P1 = c(800.2, 400.1, 127.8), P2 = c(785.3, 389.3, 156.3), P3 = c(800.4, 403.9, 140.2)
+)
+row.names(data) <- c( "TP53", "SEZ6L", "MICALL1")
+=====================================================================================================

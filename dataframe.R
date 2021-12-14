@@ -90,4 +90,25 @@ apply(BMI_df,1,sum)# row wise sum up of dataframe using apply function in R
 apply(BMI_df,2,sum)# column wise sum up of dataframe using apply function in R
 apply(BMI_df,2,mean)# column wise mean of dataframe using apply function in R
 #PAGE LINK: http://www.datasciencemadesimple.com/apply-function-r/
+====================================================================================================================
+# Select elements from a data frame with the help of square brackets [ ]. By using a comma, you can indicate what to select from the rows and the columns respectively. 
+# For example:
+my_df[1,2] # selects the value at the first row and second column in my_df DATAFRAME.
+my_df[1:3,2:4] # selects rows 1, 2, 3 and columns 2, 3, 4 in my_df DATAFRAME
+my_df[1, ] #selects all elements of the first row
+my_df[, 1] # Select all elements in the first column
+
+# Sometimes you have many vaiables and difficult to find out the numbers of columns, in this case name of the variable is the best option
+my_df[1:5, "type"] # Select first five rows and type column 
+
+
+
+
+
+
+
+
+
+
+
 

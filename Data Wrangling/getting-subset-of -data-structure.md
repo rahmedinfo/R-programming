@@ -1,5 +1,5 @@
 # Getting a subset of a data structure
-***If You want to do get a subset of the elements of a vector, matrix, or data frame, the do the follwoing***
+***If You want to do get a subset of the elements of a vector, matrix, or data frame, then do the follwoing***
 
 ```
 # a sample vector

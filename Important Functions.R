@@ -18,7 +18,7 @@ version()
 packageVersion("BiocManager")
 packageVersion("dplyr")
 ====================================================
-# How to get Help for any Packages? How to see R documentation for a Packages?
+# HOW TO GET HELP FOR ANY PACKAGES? HOW TO SEE R DOCUMENTATION FOR A PACKAGE?
 ?pacakgename
 help(packagename)
 browseVignettes("packagename")

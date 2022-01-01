@@ -23,17 +23,21 @@ packageVersion("BiocManager")
 packageVersion("dplyr")
 ====================================================
 
-# HOW TO GET HELP FOR ANY PACKAGES? HOW TO SEE R DOCUMENTATION FOR A PACKAGE?
+# HOW TO GET HELP FOR ANY PACKAGES? HOW TO SEE R DOCUMENTATION FOR A PACKAGE? 
+# HOW TO BROWS VIGNETTES
 ?pacakgename
 help(packagename)
 browseVignettes("packagename")
 ?BSgenome
 help(BSgenome)
 browseVignettes("BSgenome")
+help(package="GenomicRanges", help_type = "html")
 ==============================================================
 
 # WHEN YOU WANT TO KNOW ABOUT A PARTICULAR FUNCTION, JUST DO THIS FILLOWING WAY-
 packagesname::functionname
+===========================================================
+
 
 
 

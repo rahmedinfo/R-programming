@@ -21,6 +21,9 @@ R.version
 version()
 packageVersion("BiocManager")
 packageVersion("dplyr")
+# CHECK BIOCONDUCTOR VERSION
+tools:::.BioC_version_associated_with_R_version()
+
 ====================================================
 
 # HOW TO GET HELP FOR ANY PACKAGES? HOW TO SEE R DOCUMENTATION FOR A PACKAGE? 

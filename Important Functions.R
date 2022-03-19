@@ -40,6 +40,10 @@ help(package="GenomicRanges", help_type = "html")
 # WHEN YOU WANT TO KNOW ABOUT A PARTICULAR FUNCTION, JUST DO THIS FILLOWING WAY-
 packagesname::functionname
 ===========================================================
+# KEYBOARD SHORTCUT
+ctrl + shift + M = Pipe operator (%>%)
+alt + - = Assignment operator (<-)
+ctrl + shift + R = Sectioncreate hobe
 
 
 

@@ -44,7 +44,17 @@ packagesname::functionname
 ctrl + shift + M = Pipe operator (%>%)
 alt + - = Assignment operator (<-)
 ctrl + shift + R = Sectioncreate hobe
-
+===================================================================
+# Install packages from source file and by downloading the packages file
+# download the source file
+download.file(
+"https://github.com/al2na/methylKit/releases/download/v0.99.2/methylKit_0.99.2.tar.gz",
+               destfile="methylKit_0.99.2.tar.gz")
+# install the package from the source file
+install.packages("methylKit_0.99.2.tar.gz",
+                 repos=NULL,type="source")
+# delete the source file
+unlink("methylKit_0.99.2.tar.gz")
 
 
 

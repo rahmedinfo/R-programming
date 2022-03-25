@@ -55,7 +55,16 @@ install.packages("methylKit_0.99.2.tar.gz",
                  repos=NULL,type="source")
 # delete the source file
 unlink("methylKit_0.99.2.tar.gz")
-
+===========================================================================
+library(MASS)
+ls("package:MASS") # functions in the package
+ls() # objects in your R enviroment
+# get help on hist() function
+?hist
+help("hist")
+# search the word "hist" in help pages
+help.search("hist")
+??hist
 
 
 

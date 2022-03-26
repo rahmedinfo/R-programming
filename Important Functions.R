@@ -65,7 +65,36 @@ help("hist")
 # search the word "hist" in help pages
 help.search("hist")
 ??hist
+==========================================================================
+# How to save a R object for future use
+# save your R objects
+save(cpgi.df,enh.df,file="mydata.RData")
+load("mydata.RData")
 
+# saveRDS() can save one object at a type
+saveRDS(cpgi.df,file="cpgi.rds")
+x=readRDS("cpgi.rds")#When you load this rds file you have to assign it into new variable
+head(x)
+
+save(x, file = "xdata.RData")
+load("xdata.RData")
+x
+
+# Dataframe
+mydata <- data.frame(chr = c("chr1", "chr1", "chr2", "chr2"),
+                     strand = c("-","-","+","+"),
+                     start = c(200,4000,100,400),
+                     end=c(250,410,200,450))
+#change column names
+names(mydata) <- c("chr","start","end","strand")
+mydata # OR this will work too
+
+saveRDS(mydata, file = "mydata.rds")
+mydata = readRDS("mydata.rds")
+
+save(mydata, file = "mydata.RData")
+load("mydata.RData") #when we load it we need to specify the directory
+mydata 
 
 
 

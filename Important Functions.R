@@ -95,6 +95,11 @@ mydata = readRDS("mydata.rds")
 save(mydata, file = "mydata.RData")
 load("mydata.RData") #when we load it we need to specify the directory
 mydata 
+=========================================================================================
+# How to delete file from directory
+# At first go to the target directory where files you want to delete, then follow the below codes
+unlink("filename")
+unlink(c("filename", "filename", "filename"))
 
 
 

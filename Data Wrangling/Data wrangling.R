@@ -19,7 +19,7 @@ file1<-myfile[, c("Adipocyte", "AdrenalCortex", "Adrenalgland", "Liver", "Lung")
 #EXTRACTING ROWS
 myfile2<-myfile[c(1, 3, 5, 7, 22, 45), ]
 
-#EXTRACTING ROWS WOTH DIFFERENT APPROACH
+#EXTRACTING ROWS WITH DIFFERENT APPROACH
 myfile3<-myfile[c(1:5, 44, 200:300, 898), ]
 
 #FILTER FUNCTION TO EXTRACT A SPECIFIC CULUMN 

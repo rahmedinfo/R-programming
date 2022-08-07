@@ -1,19 +1,21 @@
 # Lets learn  "filter", "select", and "mutate" functions
 
-## Loding requried package
+### Loding requried package
 ```
 library(tidyverse)
+library(gapminder)
 ```
 
-## it will show you all the existing data in R
+### it will show you all the existing data in R
 ```
 data()
 ```
 
-## Load starwars data
+### Load starwars data
 ```
 starwars
 view(starwars)
+
 ```
 
 
@@ -31,7 +33,7 @@ starwars %>%
 
 # How to use *'filter'* function?
 
-## Loading required packages and library
+### Loading required packages and library
 ```
 install.packages("dplyr")
 library(dplyr)
@@ -40,20 +42,20 @@ library(hflights)
 View(hflights)
 ```
 
-## 'filter' functions to filter Distance variable more than 3000
+### 'filter' functions to filter Distance variable more than 3000
 ```
 filter(hflights, Distance > 3000) -> flight1
 range(flight1$Distance)
 ```
 
-## Same function can be run with pipe operator, both does the same thing
+### Same function can be run with pipe operator, both does the same thing
 ```
 hflights %>%
   filter( Distance > 2000) -> flight2
 ```
 
 
-## Now filter with '%in%' operator
+### Now filter with '%in%' operator
 ** it will filter just OO, AA, and US data. That mean it will show only those row where UniqueCarrier value is OO, AA, and US, other than that now row will be appear here on flight1 dataframe.**
 
 ```
@@ -61,7 +63,7 @@ filter(hflights, UniqueCarrier %in% c("OO", "AA", "US")) -> flight1
 table(flight1$UniqueCarrier)
 ```
 
-## This function will filter the data where the total value of TaxiIn and TaxiOut is greater than AirTime
+### This function will filter the data where the total value of TaxiIn and TaxiOut is greater than AirTime
 ```
 filter(hflights, TaxiIn+TaxiOut>AirTime)->flight1
 ```
@@ -72,7 +74,7 @@ filter(hflights,Dest=="JFK" & Cancelled==1 )->flight
 
 
 # How to use *'select'* Function?
-## Using Select function to extract some specific variable and render into new dataframe 'sw'
+### Using Select function to extract some specific variable and render into new dataframe 'sw'
 ```
 hflights %>%
   select(Year, Month, UniqueCarrier, Distance, TaxiIn, TaxiOut) -> sw
@@ -83,7 +85,7 @@ hflights %>%
 
 # How to use *'mutate'* function?
 
-## It will create a new variable TotalTaxi which contin the total value of TaxiIn and TaxiOut
+### It will create a new variable TotalTaxi which contin the total value of TaxiIn and TaxiOut
 ```
 mutate(hflights,TotalTaxi=TaxiIn+TaxiOut)->flight2
 ```

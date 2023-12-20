@@ -246,7 +246,7 @@ head(data_long_modified, 10)
 
 
 ```R
-# Explore data for all PRMT gene 
+# Explore data for PRMT gene 
 data_long_modified %>%
   filter(gene == 'PRMT1' | gene == 'PRMT5') %>%
   group_by(gene, tissue) %>%

@@ -21,23 +21,6 @@ library(repr)
 gunzip("GSE183947_fpkm.csv.gz")
 ```
 
-
-    Error in decompressFile.default(filename = filename, ..., ext = ext, FUN = FUN): No such file: GSE183947_fpkm.csv.gz
-    Traceback:
-    
-
-    1. gunzip("GSE183947_fpkm.csv.gz")
-
-    2. gunzip.default("GSE183947_fpkm.csv.gz")
-
-    3. decompressFile(filename = filename, ..., ext = ext, FUN = FUN)
-
-    4. decompressFile.default(filename = filename, ..., ext = ext, FUN = FUN)
-
-    5. stop("No such file: ", filename)
-
-
-
 ```R
 # Read the Data 
 data <- read.csv(file = "GSE183947_fpkm.csv")
